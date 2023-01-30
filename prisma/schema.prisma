@@ -1,0 +1,82 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model UserAccount {
+  id             Int             @id @unique @default(autoincrement())
+  username       String          @unique
+  password       String
+  name           String
+  accountAge     DateTime        @default(now())
+  UserPrefrences UserPrefrences?
+}
+
+model Restaurant {
+  id      Int    @id @unique @default(autoincrement())
+  name    String
+  cuisine String
+}
+
+model UserPrefrences {
+  id Int @id @unique
+  vegan Boolean @default(false)
+  vegetarian Boolean @default(false)
+  lowFat Boolean @default(false)
+  lowCalorie Boolean @default(false)
+  ketogenic Boolean @default(false)
+
+  pritikin Boolean @default(false)
+  user UserAccount? @relation(fields: [id], references: [id])
+}
+
+enum Cuisine {
+    CentralAfrican
+    EastAfrican
+    NorthAfrican
+    SouthernAfrican
+    WestAfrican
+    American
+    SouthernAmerican
+    MidwesternAmerican
+    SoulFood
+    NewEngland
+    WesternAmerican
+    SouthwesternAmerican
+    FusionAmerican
+    Mexican
+    CentralAmerican
+    SouthAmerican
+    Caribbean
+    Jewish
+    Korean
+    Chinese
+    Japanese
+    Indian
+    SouthAsian
+    EastAsian
+    Pakistani
+    SoutheastAsian
+    Indonesian
+    WestAsian
+    CentralEuropean
+    German
+    EasternEuropean
+    British
+    NorthernEuropean
+    Nordic
+    SouthernEuropean
+    Italian
+    Greek
+    WesternEuropean
+    Australian
+    Oceanic
+    Polynesian
+    Micronesian
+    Melanesian
+    FastFood
+}
