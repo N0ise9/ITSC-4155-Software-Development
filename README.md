@@ -56,7 +56,7 @@ docker run --name letseat -p 5432:5432 -e POSTGRES_USER=LetsEat  -e POSTGRES_PAS
 
 This starts a new container using the [latest PostgreSQL image from Docker Hub](https://hub.docker.com/_/postgres) with the name "letseat."
 
-Next run `npx prisma db push`. This command compiles the Prisma schema, pushes it to the Postgres DB, and generates the types for development.
+Next run `npx prisma db push` in a terminal with the working directory in the root of this projcet. This command compiles the Prisma schema, pushes it to the Postgres DB, and generates the types for development.
 
 - To stop the container, run the command: `docker container stop letseat`.
 - To start the container, run the command: `docker container start letseat`.
