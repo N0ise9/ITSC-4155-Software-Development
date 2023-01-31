@@ -24,8 +24,8 @@ model Restaurant {
 }
 
 model RestaurantFood {
-  restaurantID Int    @id @unique
-  foodID       Int    @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
+  foodID       Int    @id @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
+  restaurantID Int
   cuisine      Int
   flavor       Int[]
   name         String @db.VarChar(255)
