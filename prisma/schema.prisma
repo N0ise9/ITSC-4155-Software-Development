@@ -8,8 +8,8 @@ datasource db {
 }
 
 model FoodChoice {
-  userID       Int    @id @unique
-  restaurantID Int    @unique(map: "foodchoice_restaurantid_unique")
+  userID       Int    @id
+  restaurantID Int
   foodID       Int    @unique(map: "foodchoice_foodid_unique")
   name         String @db.VarChar(255)
   cuisine      Int[]
