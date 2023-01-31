@@ -40,7 +40,12 @@ Restart your computer if necessary.
 
 Prisma for TypeScript requires an environment variable in a `.env` file for database linkage. This file contains environment variables that will be personal for anyone who clones this repository and is not included in commits.
 
-- Create a file named `.env` in the root of the project - in the same place as this README.md file. In this new file, in the first line add: `DATABASE_URL="postgresql://LetsEat:EatingIsFUN@localhost:5432/postgres"`.
+- Create a file named `.env` in the root of the project - in the same place as this README.md file. In this new file, in the first line add:
+
+```
+DATABASE_URL="postgresql://LetsEat:EatingIsFUN@localhost:5432/postgres"
+```
+
 - Save the file.
 
 Once you have installed Docker, WSL2, Node.js, and ran `npm install` in the root of this project, run the following command in a terminal/Powershell window:
