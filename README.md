@@ -24,7 +24,7 @@ Once Node and NPM are installed, open a terminal and navigate to the root of thi
 
 This project uses [Prisma](https://www.prisma.io) with a [PostgreSQL](https://www.postgresql.org/) database to store all of the necessary data to run LetsEat. You will need [Docker](https://www.docker.com/) installed on your machine. You can go [here](https://docs.docker.com/get-docker/) to download the latest version of Docker.
 
-[WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) will need to be installed on your machine in order to properly communicate with Docker containers. To learn more about WSL2, you can go [here](https://learn.microsoft.com/en-us/windows/wsl/about). To install WSL2, open PowerShell and enter the following command:
+[WSL2](https://learn.microsoft.com/en-us/windows/wsl/install) will need to be installed on your machine in order to properly communicate with Docker containers. WSL stands for "Windows Subsystem for Linux". To learn more about WSL2, you can go [here](https://learn.microsoft.com/en-us/windows/wsl/about). To install WSL2, open PowerShell and enter the following command:
 
 ```
 wsl --install
@@ -40,22 +40,21 @@ Restart your computer if necessary.
 
 Prisma for TypeScript requires an environment variable in a `.env` file for database linkage. This file contains environment variables that will be personal for anyone who clones this repository and is not included in commits.
 
-- Create a file named `.env` in the root of the project - in the same place as this README.md file. In this new file, in the first line add: `DATABASE_URL="postgresql://Group8:EatingIsFUN@localhost:5432/postgres"`.
+- Create a file named `.env` in the root of the project - in the same place as this README.md file. In this new file, in the first line add: `DATABASE_URL="postgresql://LetsEat:EatingIsFUN@localhost:5432/postgres"`.
 - Save the file.
 
 Once you have installed Docker, WSL2, Node.js, and ran `npm install` in the root of this project, run the following command in a terminal/Powershell window:
 
 ```
-docker run --name letseat -p 6000:5432 -e POSTGRES_USER=LetsEat  -e POSTGRES_PASSWORD=EatingIsFUN -d postgres
+docker run --name letseat -p 5432:5432 -e POSTGRES_USER=LetsEat  -e POSTGRES_PASSWORD=EatingIsFUN -d postgres
 ```
 
 This starts a new container using the [latest PostgreSQL image from Docker Hub](https://hub.docker.com/_/postgres) with the name "letseat."
 
-Next run `npx prisma db push`. This command compiles the Prisma schema, pushes it to the Postgre DB, and generates the types for development.
+Next run `npx prisma db push`. This command compiles the Prisma schema, pushes it to the Postgres DB, and generates the types for development.
 
-To stop the container, run the command: `docker container stop uncc_six_mans`.
-
-To start the container, run the command: `docker container start uncc_six_mans`.
+- To stop the container, run the command: `docker container stop letseat`.
+- To start the container, run the command: `docker container start letseat`.
 
 Prisma also offers a tool for viewing the data in the database called Prisma Studio. To start it, run the command: `npx prisma studio`. This will output a localhost URL that you can paste into your browser and explore the database.
 
