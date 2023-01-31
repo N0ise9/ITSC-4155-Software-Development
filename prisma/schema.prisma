@@ -8,38 +8,35 @@ datasource db {
 }
 
 model FoodChoice {
-  userID         String         @id @db.Uuid
-  foodID         Int            @unique(map: "foodchoice_foodid_unique")
-  name           String         @db.VarChar(255)
-  calories       Int
-  carbs          Int
-  protein        Int
-  fat            Int
-  restaurantID   String         @unique(map: "foodchoice_restaurantid_unique") @db.Uuid
-  RestaurantFood RestaurantFood @relation(fields: [restaurantID], references: [restaurantID], onDelete: NoAction, onUpdate: NoAction, map: "foodchoice_restaurantid_foreign")
+  userID       Int    @id @unique
+  restaurantID Int    @unique(map: "foodchoice_restaurantid_unique")
+  foodID       Int    @unique(map: "foodchoice_foodid_unique")
+  name         String @db.VarChar(255)
+  cuisine      Int[]
+  flavor       Int[]
 }
 
 model Restaurant {
-  restaurantID   String @id @db.Uuid
-  name           String @db.VarChar(255)
-  address        String @db.VarChar(255)
-  cuisine        String @db.VarChar(255)
-  restaurantFood Int?
+  restaurantID Int    @id @unique @default(autoincrement())
+  name         String @db.VarChar(255)
+  address      String @db.VarChar(255)
+  cuisine      Int[]
 }
 
 model RestaurantFood {
-  restaurantID String      @id @db.Uuid
-  foodID       Int         @unique(map: "restaurantfood_foodid_unique")
-  name         String      @db.VarChar(255)
+  restaurantID Int    @id @unique
+  foodID       Int    @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
+  cuisine      Int
+  flavor       Int[]
+  name         String @db.VarChar(255)
   calories     Int
   carbs        Int
   protein      Int
   fat          Int
-  FoodChoice   FoodChoice?
 }
 
 model UserAccount {
-  userID     String   @id @db.Uuid
+  userID     Int      @id @unique @default(autoincrement())
   username   String   @unique(map: "useraccount_username_unique") @db.VarChar(255)
   password   String   @db.VarChar(255)
   email      String   @unique(map: "useraccount_email_unique") @db.VarChar(255)
@@ -48,71 +45,81 @@ model UserAccount {
 }
 
 model UserPrefrences {
-  userID         String  @id @db.Uuid
-  name           String  @db.VarChar(255)
-  vegan          Boolean @default(false)
-  vegetarian     Boolean @default(false)
-  lowFat         Boolean @default(false)
-  lowCalorie     Boolean @default(false)
-  ketogenic      Boolean @default(false)
-  atkins         Boolean @default(false)
-  dash           Boolean @default(false)
-  glutenFree     Boolean @default(false)
-  fruitarian     Boolean @default(false)
-  cardiac        Boolean @default(false)
-  paleolithic    Boolean @default(false)
-  pescetarian    Boolean @default(false)
-  pritikin       Boolean @default(false)
-  range          Int     @default(50)
-  maxCost        Int?
-  cuisineChoice  String? @db.VarChar(255)
-  foodChoice     Int?
-  foodChoiceName String? @db.VarChar(255)
+  userID      Int     @id @unique
+  range       Int     @default(50)
+  maxCost     Int?
+  cuisine     Int[]
+  flavor      Int[]
+  vegan       Boolean @default(false)
+  vegetarian  Boolean @default(false)
+  lowFat      Boolean @default(false)
+  lowCalorie  Boolean @default(false)
+  ketogenic   Boolean @default(false)
+  atkins      Boolean @default(false)
+  dash        Boolean @default(false)
+  glutenFree  Boolean @default(false)
+  fruitarian  Boolean @default(false)
+  cardiac     Boolean @default(false)
+  paleolithic Boolean @default(false)
+  pescetarian Boolean @default(false)
+  pritikin    Boolean @default(false)
 }
 
-enum Cuisine {
-  CentralAfrican
-  EastAfrican
-  NorthAfrican
-  SouthernAfrican
-  WestAfrican
-  American
-  SouthernAmerican
-  MidwesternAmerican
-  SoulFood
-  NewEngland
-  WesternAmerican
-  SouthwesternAmerican
-  FusionAmerican
-  Mexican
-  CentralAmerican
-  SouthAmerican
-  Caribbean
-  Jewish
-  Korean
-  Chinese
-  Japanese
-  Indian
-  SouthAsian
-  EastAsian
-  Pakistani
-  SoutheastAsian
-  Indonesian
-  WestAsian
-  CentralEuropean
-  German
-  EasternEuropean
-  British
-  NorthernEuropean
-  Nordic
-  SouthernEuropean
-  Italian
-  Greek
-  WesternEuropean
-  Australian
-  Oceanic
-  Polynesian
-  Micronesian
-  Melanesian
-  FastFood
-}
+// enum FlavorProfile {
+//   sweet
+//   spicy
+//   salty
+//   savory
+//   bitter
+//   sour
+//   hot
+//   cold
+//   meaty
+// }
+
+// enum Cuisine {
+//   CentralAfrican
+//   EastAfrican
+//   NorthAfrican
+//   SouthernAfrican
+//   WestAfrican
+//   American
+//   SouthernAmerican
+//   MidwesternAmerican
+//   SoulFood
+//   NewEngland
+//   WesternAmerican
+//   SouthwesternAmerican
+//   FusionAmerican
+//   Mexican
+//   CentralAmerican
+//   SouthAmerican
+//   Caribbean
+//   Jewish
+//   Korean
+//   Chinese
+//   Japanese
+//   Indian
+//   SouthAsian
+//   EastAsian
+//   Pakistani
+//   SoutheastAsian
+//   Indonesian
+//   WestAsian
+//   CentralEuropean
+//   German
+//   EasternEuropean
+//   British
+//   NorthernEuropean
+//   Nordic
+//   SouthernEuropean
+//   Italian
+//   Greek
+//   WesternEuropean
+//   Australian
+//   Oceanic
+//   Polynesian
+//   Micronesian
+//   Melanesian
+//   FastFood
+// }
