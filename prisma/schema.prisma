@@ -12,7 +12,7 @@ model FoodChoice {
   restaurantID Int
   foodID       Int    @unique(map: "foodchoice_foodid_unique")
   name         String @db.VarChar(255)
-  cuisine      Int[]
+  cuisine      Int
   flavor       Int[]
 }
 
@@ -20,7 +20,8 @@ model Restaurant {
   restaurantID Int    @id @unique @default(autoincrement())
   name         String @db.VarChar(255)
   address      String @db.VarChar(255)
-  cuisine      Int[]
+  rating       Int?
+  cuisine      Int
 }
 
 model RestaurantFood {
