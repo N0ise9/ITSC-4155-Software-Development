@@ -20,6 +20,7 @@ model Restaurant {
   restaurantID Int    @id @unique @default(autoincrement())
   name         String @db.VarChar(255)
   address      String @db.VarChar(255)
+  rating       Int?
   cuisine      Int
 }
 
