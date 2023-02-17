@@ -1,7 +1,6 @@
-// const express = require("express");
 import express from "express";
-const morgan = require("morgan");
-const methodOverride = require("method-override");
+import morgan from "morgan";
+import methodOverride from "method-override"
 
 const app = express();
 
