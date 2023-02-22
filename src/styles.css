@@ -1,0 +1,22 @@
+html {
+  background-color: white;
+}
+body {
+  text-align: center;
+  margin: auto;
+}
+
+h1,
+h2 {
+  text-align: center;
+}
+
+.userProfile {
+  float: left;
+  padding-left: 10px;
+}
+
+.signUp {
+  float: right;
+  padding-right: 10px;
+}
