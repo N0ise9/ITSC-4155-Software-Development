@@ -1,7 +1,8 @@
-import express, { Application, Request, Response, NextFunction } from "express";
+import express, { Application } from "express";
 import path from "node:path";
+import testRoutes from "./routes/testRoutes";
 
-const testRoutes = require("./routes/testRoutes");
+//const testRoutes = require("./routes/testRoutes");
 const app: Application = express();
 
 app.set("view engine", "ejs");
