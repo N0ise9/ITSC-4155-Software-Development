@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Let's Eat</title>
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <script src="./survey.js"></script>
+  </head>
+
+  <body>
+    <h1>Let's Eat</h1>
+    <!--UserProfile page displays when user is logged in-->
+    <h2 class="userProfile">User Profile</h2>
+    <h2 class="signUp">SignUp/Login</h2>
+    <br />
+    <h2>Survey</h2>
+
+    <!-- partial:index.partial.html -->
+    <form class="fr" action="">
+      <label class="fr__label" for="face-rating">How was your experience?</label>
+      <div class="fr__face" role="img" aria-label="Straight face">
+        <div class="fr__face-right-eye" data-right></div>
+        <div class="fr__face-left-eye" data-left></div>
+        <div class="fr__face-mouth-lower" data-mouth-lower></div>
+        <div class="fr__face-mouth-upper" data-mouth-upper></div>
+      </div>
+      <input class="fr__input" id="face-rating" type="range" value="2.5" min="0" max="5" step="0.1" />
+    </form>
+    <!-- partial -->
+    <br />
+
+    <!--Feedback form-->
+    <div class="container">
+      <form action="#">
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="John Doe" /><br />
+        <br />
+        <label for="feedback">Feedback</label>
+        <textarea type="feedback" id="feedback" rows="5" cols="50" placeholder="feedback"></textarea>
+        <br />
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+</html>
