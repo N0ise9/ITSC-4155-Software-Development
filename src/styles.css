@@ -57,6 +57,7 @@ body {
   margin: auto;
   border: auto;
 }
+
 .fr__face {
   --face-hue1: 60;
   --face-hue2: 30;
@@ -68,6 +69,7 @@ body {
   width: 3em;
   height: 3em;
 }
+
 .fr__face-right-eye,
 .fr__face-left-eye,
 .fr__face-mouth-lower,
