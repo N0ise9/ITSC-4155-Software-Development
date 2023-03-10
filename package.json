@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
     "build": "tsc",
-    "start": "ts-node-dev -r dotenv/config src/index.ts",
+    "start": "ts-node-dev -r dotenv/config src/app.ts",
     "test": "jest --testMatch='**/__tests__/*.unit.spec.ts' --testNamePattern=",
     "integration": "jest --runInBand --testMatch='**/__tests__/*.int.spec.ts' --testNamePattern="
   },
