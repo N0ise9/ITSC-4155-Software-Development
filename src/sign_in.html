@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <style>
+            h1, h2 {text-align: center;}
+        </style>
         <title>
-            Let's Eat - Sign Up
+            Let's Eat - Sign In
         </title>
     </head>
 
@@ -14,18 +17,15 @@
         </header>
         <main>
             <h2>
-              Sign Up
+              Sign In
             </h2>
-            <form>
-                <label for="fname"></label>
-                <input type="text" id="fname" size="15" placeholder="First Name" required>
-                <label for="lname"></label>
-                <input type="text" id="lname" size="15" placeholder="Last Name" required><br><br>
-                <input type="text" id="email" size="25" placeholder="E-mail Address" required><br><br>
-                <input type="text" id="password" size="15" placeholder="Password" required><br><br>
-                <input type="text" id="repassword" size="15" placeholder="Re-type password" required><br><br>
-            </form>
-            <button type="button">Go</button>
+            <div style="text-align: center;">
+                <form style="display: inline-block; text-align: left;">
+                    <input type="text" id="email" size="25" placeholder="E-mail Address" required><br><br>
+                    <input type="text" id="password" size="15" placeholder="Password" required><br><br>
+                </form>
+            </div>
+            <button style="margin: 0 auto; display: block;" type="button">Go</button>
         </main>
     </body>
 </html>
