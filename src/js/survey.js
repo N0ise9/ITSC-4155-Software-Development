@@ -1,10 +1,12 @@
+import { window, doc } from "./window";
+
 window.addEventListener("DOMContentLoaded", () => {
   const fr = new FaceRating("#face-rating");
 });
 
 class FaceRating {
   constructor(qs) {
-    this.input = document.querySelector(qs);
+    this.input = doc.querySelector(qs);
     this.input?.addEventListener("input", this.update.bind(this));
     this.face = this.input?.previousElementSibling;
     this.update();
