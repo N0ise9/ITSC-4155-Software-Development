@@ -6,8 +6,7 @@
   "scripts": {
     "lint": "eslint \"src/**/*.ts\"",
     "build": "tsc",
-    "start": "node build/app.js",
-    "dev": "nodemon src/app.ts",
+    "start": "ts-node-dev -r dotenv/config src/app.ts",
     "test": "jest --testMatch='**/__tests__/*.unit.spec.ts' --testNamePattern=",
     "integration": "jest --runInBand --testMatch='**/__tests__/*.int.spec.ts' --testNamePattern="
   },
@@ -34,7 +33,6 @@
     "eslint": "^8.32.0",
     "faker": "5.5.3",
     "jest": "^29.4.0",
-    "nodemon": "^2.0.21",
     "prettier": "^2.8.3",
     "prisma": "^4.9.0",
     "sass": "^1.58.0",
