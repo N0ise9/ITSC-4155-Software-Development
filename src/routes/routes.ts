@@ -5,7 +5,7 @@ const router = express.Router();
 router.get("/", controller.index);
 router.get("/profile", controller.profile);
 router.get("/signin", controller.signin);
-router.get("/signuplogin", controller.signuplogin);
+router.get("/signup", controller.signup);
 router.get("/survey", controller.survey);
 router.get("/thankyou", controller.thankyou);
 

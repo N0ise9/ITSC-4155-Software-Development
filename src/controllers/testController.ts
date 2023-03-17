@@ -12,8 +12,8 @@ export const signin = (req: Request, res: Response) => {
   res.render("signin", { title: "Sign in" });
 };
 
-export const signuplogin = (req: Request, res: Response) => {
-  res.render("signuplogin", { title: "Sign up" });
+export const signup = (req: Request, res: Response) => {
+  res.render("signup", { title: "Sign up" });
 };
 
 export const survey = (req: Request, res: Response) => {
