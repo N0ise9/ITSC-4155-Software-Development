@@ -1,13 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Let's Eat</title>
-    <link rel="stylesheet" type="text/css" href="./styles.css" />
-    <script src="./survey.js"></script>
-  </head>
+<%- include('./partials/header.ejs') %>
 
-  <body>
     <h1>Let's Eat</h1>
     <!--UserProfile page displays when user is logged in-->
     <h2 class="userProfile">User Profile</h2>
@@ -44,5 +36,6 @@
         <input type="submit" value="Submit" />
       </form>
     </div>
-  </body>
-</html>
+
+<%- include('./partials/footer.ejs') %>
+

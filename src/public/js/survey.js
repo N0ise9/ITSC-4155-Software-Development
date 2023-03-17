@@ -1,12 +1,14 @@
-import { window, doc } from "./window";
+// import { window, doc } from "./window.js";
 
+// eslint-disable-next-line no-undef
 window.addEventListener("DOMContentLoaded", () => {
   const fr = new FaceRating("#face-rating");
 });
 
 class FaceRating {
   constructor(qs) {
-    this.input = doc.querySelector(qs);
+    // eslint-disable-next-line no-undef
+    this.input = document.querySelector(qs);
     this.input?.addEventListener("input", this.update.bind(this));
     this.face = this.input?.previousElementSibling;
     this.update();
