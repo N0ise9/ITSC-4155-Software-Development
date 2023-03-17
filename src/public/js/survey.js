@@ -1,3 +1,4 @@
+// Changing this to .js fixes the 404 error, but then get a bunch of errors
 import { window, doc } from "./window";
 
 window.addEventListener("DOMContentLoaded", () => {

@@ -1,44 +1,37 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Let's Eat</title>
-    <link rel="stylesheet" type="text/css" href="styles.css" />
-  </head>
+<%- include('./partials/header.ejs') %>
 
-  <body>
-    <h1>Let's Eat</h1>
-    <!--UserProfile page displays when user is logged in-->
-    <h2 class="userProfile">User Profile</h2>
-    <h2 class="signUp">SignUp/Login</h2>
+<h1>Let's Eat</h1>
+<!--UserProfile page displays when user is logged in-->
+<h2 class="userProfile">User Profile</h2>
+<h2 class="signUp">SignUp/Login</h2>
 
-    <br />
-    <h2>Cuisine</h2>
+<br />
+<h2>Cuisine</h2>
 
-    <ul style="list-style: none">
-      <li>
-        Thai
-        <input type="checkbox" />
-      </li>
-      <li>
-        Chinese
-        <input type="checkbox" />
-      </li>
-      <li>
-        Italian
-        <input type="checkbox" />
-      </li>
-      <li>
-        Japanese
-        <input type="checkbox" />
-      </li>
-      <li>
-        Indian
-        <input type="checkbox" />
-      </li>
-    </ul>
+<ul style="list-style: none">
+  <li>
+    Thai
+    <input type="checkbox" />
+  </li>
+  <li>
+    Chinese
+    <input type="checkbox" />
+  </li>
+  <li>
+    Italian
+    <input type="checkbox" />
+  </li>
+  <li>
+    Japanese
+    <input type="checkbox" />
+  </li>
+  <li>
+    Indian
+    <input type="checkbox" />
+  </li>
+</ul>
 
-    <button>Idk</button>
-    <button>Ok</button>
-  </body>
-</html>
+<button>Idk</button>
+<button>Ok</button>
+
+<%- include('./partials/footer.ejs') %>
