@@ -13,7 +13,7 @@ export const signin = (req: Request, res: Response) => {
 };
 
 export const signuplogin = (req: Request, res: Response) => {
-  res.render("signuplogin", {title: "Sign up"});
+  res.render("signuplogin", { title: "Sign up" });
 };
 
 export const survey = (req: Request, res: Response) => {
@@ -21,5 +21,5 @@ export const survey = (req: Request, res: Response) => {
 };
 
 export const thankyou = (req: Request, res: Response) => {
-  res.render("thankyou", {styles: "index", title: "Thank You!" });
+  res.render("thankyou", { styles: "index", title: "Thank You!" });
 };
