@@ -1,5 +1,13 @@
 import { Request, Response } from "express";
 
+export const dishes = (req: Request, res: Response) => {
+  res.render("dishes", { styles: "guided-style", title: "Dishes" });
+};
+
+export const flavors = (req: Request, res: Response) => {
+  res.render("flavors", { styles: "guided-style", title: "Flavors" });
+};
+
 export const index = (req: Request, res: Response) => {
   res.render("index", { styles: "index", title: "Let's Eat" });
 };
