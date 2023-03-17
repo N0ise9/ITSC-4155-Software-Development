@@ -8,12 +8,12 @@ export const profile = (req: Request, res: Response) => {
   res.render("profile", { title: "Profile" });
 };
 
-export const signin = (req: Request, res: Response) => {
-  res.render("signin", { title: "Sign in" });
+export const registration = (req: Request, res: Response) => {
+  res.render("registration", { styles: "registration", title: "Registration" });
 };
 
-export const signup = (req: Request, res: Response) => {
-  res.render("signup", { title: "Sign up" });
+export const signin = (req: Request, res: Response) => {
+  res.render("signin", { title: "Sign in" });
 };
 
 export const survey = (req: Request, res: Response) => {
