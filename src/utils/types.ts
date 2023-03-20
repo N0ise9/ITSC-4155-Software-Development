@@ -59,16 +59,16 @@ export const enum Cuisine {
 
 export interface UserInSite {
   id: string;
-  cuisineChoices: Array<Cuisine>;
-  flavorChoices: Array<Flavor>;
-  foodChoices: Array<number>;
+  cuisineChoices: Array<Cuisine> | null;
+  flavorChoices: Array<Flavor> | null;
+  foodChoices: Array<Food> | null;
   foodFondness: ReadonlyArray<FoodFondness>;
   foodRankings: ReadonlyArray<FoodRankings>;
 }
 
 export interface FoodFondness {
   id: string;
-  fondness?: number | 0;
+  fondness?: number | 1;
 }
 
 export interface FoodRankings {
