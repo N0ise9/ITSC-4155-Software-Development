@@ -1,5 +1,3 @@
-// Will be reworked for user prefrences
-
 interface TeamProbabilityDecimalResult {
   blueProbabilityDecimal: number;
   orangeProbabilityDecimal: number;

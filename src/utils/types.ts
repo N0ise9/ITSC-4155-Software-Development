@@ -56,3 +56,22 @@ export const enum Cuisine {
   Melanesian = 42,
   FastFood = 43,
 }
+
+export interface UserInSite {
+  id: string;
+  cuisineChoices: Array<Cuisine>;
+  flavorChoices: Array<Flavor>;
+  foodChoices: Array<number>;
+  foodFondness: ReadonlyArray<FoodFondness>;
+  foodRankings: ReadonlyArray<FoodRankings>;
+}
+
+export interface FoodFondness {
+  id: string;
+  fondness?: number | 0;
+}
+
+export interface FoodRankings {
+  id: string;
+  rank: number;
+}
