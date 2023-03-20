@@ -75,3 +75,9 @@ export interface FoodRankings {
   id: string;
   rank: number;
 }
+
+export interface Food {
+  id: string;
+  cuisine: Cuisine;
+  flavors: ReadonlyArray<Flavor>;
+}
