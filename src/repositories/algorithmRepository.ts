@@ -15,7 +15,7 @@ export function getFood(
     console.warn("User has not selected any food.");
     return;
   }
-  const usersChoice = user.foodChoices?.find((userChoice) => userChoice === food);
+  const usersChoice = user.foodChoices.find((userChoice) => userChoice === food);
   const fondnessMatch = user.foodFondness.find((userChoice) => userChoice === foodFondness);
   const rankingMatch = user.foodRankings.find((userChoice) => userChoice === foodRanking);
   if (usersChoice === undefined) {
