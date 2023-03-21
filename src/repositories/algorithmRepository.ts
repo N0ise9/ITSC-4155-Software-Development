@@ -43,6 +43,10 @@ export function getRanking(foodRankings: FoodRankings): number {
   return foodRankings.rank;
 }
 
+export function getUserRankings(user: UserInSite): ReadonlyArray<FoodRankings> {
+  return user.foodRankings;
+}
+
 export function getFondness(foodFondness: FoodFondness): number | undefined {
   if (foodFondness.fondness === undefined) {
     console.warn("The user has not selected a fondness level for this food.");
