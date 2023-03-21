@@ -1,5 +1,5 @@
 import { Cuisine, UserInSite } from "../src/utils/types";
-import * as faker from "faker";
+import falso from "@ngneat/falso";
 
 abstract class Builder<T> {
   abstract isEqual(a: T, b: T): boolean;
@@ -40,7 +40,7 @@ class UserInSiteBuilderClass extends Builder<UserInSite> {
 
   single(overrides?: Partial<UserInSite>) {
     return {
-      id: faker.datatype.uuid(),
+      id: falso.incrementalNumber(),
       cuisineChoices: faker.datatype.Array.Cuisine(),
       flavorChoices: faker.datatype.Array.Flavor(),
       foodChoices: faker.datatype.Array.Food(),
