@@ -43,7 +43,7 @@ export function getRanking(foodRankings: FoodRankings): number {
   return foodRankings.rank;
 }
 
-export function getUserRankings(user: UserInSite): ReadonlyArray<FoodRankings> {
+export function getAllUserRankings(user: UserInSite): ReadonlyArray<FoodRankings> {
   return user.foodRankings;
 }
 
