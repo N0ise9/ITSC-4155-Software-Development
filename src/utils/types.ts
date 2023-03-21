@@ -68,11 +68,13 @@ export interface UserInSite {
 
 export interface FoodFondness {
   id: string;
-  fondness?: number | 1;
+  user: string;
+  fondness?: number;
 }
 
 export interface FoodRankings {
   id: string;
+  user: string;
   rank: number;
 }
 
