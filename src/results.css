@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+main h2, header h1 {
+    text-align: center;
+}
+
+#map {
+    width: 500px;
+    height: 500px;
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.card {
+    border: 2px solid black;
+}
+
+.card:hover {
+    cursor: pointer;
+}

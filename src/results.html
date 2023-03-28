@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapbox test</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+<link rel="stylesheet" href="results.css">
+</head>
+<header>
+    <div class="header-buttons">
+        <button type="button">Group</button>
+        <button type="button">Sign in</button>
+    </div>
+    <h1>Let's Eat</h1>
+    <hr>
+</header>
+<body>
+    <main>
+        <h2>Results</h2>
+        <div class="results-container">
+            <div class="card-container">
+                <div class="card" id="card1">
+                    <h2>1. The Porter's House</h2>
+                    <p>Rating: ???</p>
+                </div>
+                <div class="card" id="card2">
+                    <h2>2. The Cowfish Sushi Burger Bar</h2>
+                    <p>Rating: ???</p>
+                </div>
+                <div class="card" id="card3">
+                    <h2>3. The Waterman Fish Bar</h2>
+                    <p>Rating: ???</p>
+                </div>
+            </div>
+            <div id="map"></div>
+        </div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWFhaG1lZDEiLCJhIjoiY2xmb2pybTB0MHdkNjNycnp0NnpxeXAwcCJ9.Sy0CCfXauSYXGt9lBPNUEw';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [-80.843, 35.2271],
+            zoom: 9
+        });
+        const marker1 = new mapboxgl.Marker().setLngLat([-80.766440, 35.051020]).addTo(map);
+        const marker2 = new mapboxgl.Marker().setLngLat([-80.827956, 35.152777]).addTo(map);
+        const marker3 = new mapboxgl.Marker().setLngLat([-80.866333, 35.19928]).addTo(map);
+        marker1.setPopup(new mapboxgl.Popup().setHTML("<h1>The Porter's House</h1><p>7417 Waverly Walk Ave, Charlotte, NC 28277</p>"));
+        marker2.setPopup(new mapboxgl.Popup().setHTML("<h1>The Cowfish Sushi Burger Bar</h1><p>4310 Sharon Rd, Charlotte, NC 28211</p>"));
+        marker3.setPopup(new mapboxgl.Popup().setHTML("<h1>The Waterman Fish Bar</h1><p>2729 South Blvd Suite D, Charlotte, NC 28209</p>"));
+
+        document.querySelector('#card1').addEventListener('click', (e) => marker1.togglePopup());
+        document.querySelector('#card2').addEventListener('click', (e) => marker2.togglePopup());
+        document.querySelector('#card3').addEventListener('click', (e) => marker3.togglePopup());
+    </script>
+    </main>
+</body>
+</html>
