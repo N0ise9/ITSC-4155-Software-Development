@@ -48,6 +48,15 @@ export async function calculateProbabilityDecimals(
   return;
 }
 
+export function fondnessAdjustment(mmr: number, foodFondness: FoodFondness) {
+  const fondness = foodFondness.fondness;
+  if (fondness) {
+    const adjustment = fondness * 10;
+    const result = adjustment + mmr;
+    return result;
+  }
+}
+
 export function calculateMMR(calculatedProbabilityDecimal: number): number {
   let mmr = (1 - calculatedProbabilityDecimal) * 20;
   mmr = Math.min(15, mmr);
