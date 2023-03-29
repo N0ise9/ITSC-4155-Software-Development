@@ -31,3 +31,7 @@ export const survey = (req: Request, res: Response) => {
 export const thankyou = (req: Request, res: Response) => {
   res.render("thankyou", { styles: "index", title: "Thank You!" });
 };
+
+export const about = (req: Request, res: Response) => {
+  res.render("about", { styles: "about", title: "About" });
+};

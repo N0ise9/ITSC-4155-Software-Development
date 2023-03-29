@@ -22,6 +22,12 @@ a:link {
   text-decoration: none;
 }
 
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
 /* html {
   background-color: white;
 }
