@@ -4,7 +4,7 @@ import * as controller from "../controllers/registration";
 const router = express.Router();
 
 //GET /users/new: send html form for creating a new user account
-router.get('/new', controller.new);
+router.get('/registration', controller.new);
 
 //POST /users: create a new user account
 router.post('/', controller.create);
