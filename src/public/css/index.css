@@ -1,4 +1,34 @@
-html {
+h1,
+h2 {
+  text-align: center;
+}
+
+.userProfile {
+  float: left;
+  padding-left: 10px;
+}
+
+.signUp {
+  float: right;
+  padding-right: 10px;
+}
+
+body {
+  text-align: center;
+  margin: auto;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+/* html {
   background-color: white;
 }
 body {
@@ -19,7 +49,7 @@ h2 {
 .signUp {
   float: right;
   padding-right: 10px;
-}
+} */
 
 :root {
   --hue: 223;

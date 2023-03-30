@@ -1,11 +1,11 @@
 import { Request, Response } from "express";
 
 export const dishes = (req: Request, res: Response) => {
-  res.render("dishes", { styles: "guided-style", title: "Dishes" });
+  res.render("dishes", { styles: "index", title: "Dishes" });
 };
 
 export const flavors = (req: Request, res: Response) => {
-  res.render("flavors", { styles: "guided-style", title: "Flavors" });
+  res.render("flavors", { styles: "guided-index", title: "Flavors" });
 };
 
 export const index = (req: Request, res: Response) => {
@@ -17,7 +17,7 @@ export const profile = (req: Request, res: Response) => {
 };
 
 export const registration = (req: Request, res: Response) => {
-  res.render("registration", { styles: "registration", title: "Registration" });
+  res.render("registration", { styles: "index", title: "Registration" });
 };
 
 export const signin = (req: Request, res: Response) => {
@@ -30,4 +30,8 @@ export const survey = (req: Request, res: Response) => {
 
 export const thankyou = (req: Request, res: Response) => {
   res.render("thankyou", { styles: "index", title: "Thank You!" });
+};
+
+export const about = (req: Request, res: Response) => {
+  res.render("about", { styles: "index", title: "About" });
 };
