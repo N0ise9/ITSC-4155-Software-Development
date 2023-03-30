@@ -26,7 +26,11 @@
   </li>
 </ul>
 
-<button type="button"><a href="/flavors">I'm not sure</a></button>
-<button type="button"><a href="/flavors">Ok</a></button>
+<form action="/flavors" method="get">
+    <button>I'm not sure</button>
+  </form>
+  <form action="/flavors" method="get">
+    <button>Ok</button>
+  </form>
 
 <%- include('./partials/footer.ejs') %>

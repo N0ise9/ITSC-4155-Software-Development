@@ -8,8 +8,14 @@
   <button type="button">Spicy</button>
 </div>
 <div class="main-nav-buttons">
-  <button type="button"><a href="/"> Go back</a></button>
-  <button type="button"><a href="/dishes">I'm not sure</a></button>
-  <button type="button"><a href="/dishes">Ok</a></button>
+  <form action="/" method="get">
+    <button>Go back</button>
+  </form>
+  <form action="/dishes" method="get">
+    <button>I'm not sure</button>
+  </form>
+  <form action="/dishes" method="get">
+    <button>Ok</button>
+  </form>
 </div>
 <%- include('./partials/footer.ejs') %>
