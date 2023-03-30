@@ -34,7 +34,7 @@ export const thankyou = (req: Request, res: Response) => {
 
 export const results = (req: Request, res: Response) => {
   res.render("results");
-}
+};
 
 export const about = (req: Request, res: Response) => {
   res.render("about", { styles: "index", title: "About" });
