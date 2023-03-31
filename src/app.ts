@@ -1,6 +1,16 @@
 import express, { Application } from "express";
 import path from "node:path";
 import routes from "./routes/routes";
+const express = require('express');
+const morgan = require('morgan');
+
+
+const registration = require("./routes/registration");
+const userRoutes = require('./routes/userRoutes');
+const User = require('./models/user');
+const session = require('express-session');
+
+const flash = require('connect-flash');
 
 const app: Application = express();
 /* eslint-disable no-console */
