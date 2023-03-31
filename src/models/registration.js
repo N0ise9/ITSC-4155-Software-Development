@@ -8,7 +8,7 @@ const userSchema = new Schema({
 }
 );
 
-userSchema.pre('save', function(next){
+userSchema.pre("save", function(next){
     let user = this;
     if (!user.isModified("password"))
         return next();
@@ -24,7 +24,7 @@ userSchema.pre('save', function(next){
   userSchema.methods.comparePassword = function(loginPassword) {
     let user = this;
     return bcrypt.compare(loginPassword, this.password);
-  }
+  };
 
 
 

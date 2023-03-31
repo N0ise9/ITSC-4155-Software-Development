@@ -13,7 +13,7 @@ export const registration= (req:Request, res:Response )=>{
 
 
 //process the login request
-export const login = (req:Request, res:Response , next)=>{
+export const login = (req:Request, res:Response , next: NextFunction)=>{
     //authentication user login request
     let email = req.body.email;
     let password = req.body.password;
@@ -50,12 +50,12 @@ export const login = (req:Request, res:Response , next)=>{
 
 
 
-export const getUserLogin = (req:Request, res:Response , next) => {
+export const getUserLogin = (req:Request, res:Response , next: Function) => {
         return res.render("./views/signin");
 };
 
 //create a new user
-export const create = (req:Request, res:Response , next)=>{
+export const create = (req:Request, res:Response , next:Function)=>{
     let user = new User(req.body);
     user.save()
     .then(()=>res.redirect("/views/signin"))
@@ -73,7 +73,7 @@ export const create = (req:Request, res:Response , next)=>{
 };
 
 //get user profile
-export const profile = (req:Request, res:Response , next)=>{
+export const profile = (req:Request, res:Response , next: NextFunction)=>{
     let id = req.session.user;
     console.log(req.flash());
     User.findById(id)
@@ -83,7 +83,7 @@ export const profile = (req:Request, res:Response , next)=>{
 };
 
 
-export const logout = (req, res, next)=>{
+export const logout = (req:Request, res:Response , next: NextFunction)=>{
     req.session.destroy(err=>{
         if(err) 
            return next(err);
