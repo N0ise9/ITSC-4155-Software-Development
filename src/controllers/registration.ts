@@ -1,12 +1,12 @@
 import { Request, Response } from "express";
 
 
-const User = require('../views/registration');
+const User = require("../views/registration");
 
 
 
 export const registration= (req:Request, res:Response )=>{
-        return res.render('../views/registration');
+        return res.render("../views/registration");
 };
 
 
@@ -28,21 +28,21 @@ export const login = (req:Request, res:Response , next)=>{
             .then(result=>{
                 if(result){
                     req.session.user = user._id; //store users 
-                    req.flash('success', 'You have successfully logged in');
-                    res.redirect('/views/profile');
+                    req.flash("success", "You have successfully logged in");
+                    res.redirect("/views/profile");
                     
                 }else{
                     //console.log('wrong password')
-                    req.flash('error','wrong password!');
-                    res.redirect('/users/login');
+                    req.flash("error","wrong password!");
+                    res.redirect("/users/login");
                    
                 }
             })
 
         }else{
             //console.log('wrong email address');
-            req.flash('error','wrong email address');
-            res.redirect('/views/signin');
+            req.flash("error","wrong email address");
+            res.redirect("/views/signin");
         }
     })
     .catch(err=>next(err));
@@ -51,22 +51,22 @@ export const login = (req:Request, res:Response , next)=>{
 
 
 export const getUserLogin = (req:Request, res:Response , next) => {
-        return res.render('./views/signin');
+        return res.render("./views/signin");
 };
 
 //create a new user
 export const create = (req:Request, res:Response , next)=>{
     let user = new User(req.body);
     user.save()
-    .then(()=>res.redirect('/views/signin'))
+    .then(()=>res.redirect("/views/signin"))
     .catch(err=>{
-        if(err.name === 'ValidationError'){
-            req.flash('error',err.message);
-            return res.redirect('/views/registration');
+        if(err.name === "ValidationError"){
+            req.flash("error",err.message);
+            return res.redirect("/views/registration");
         }
         if(err.code === 11000){
-            req.flash('error','email adress has been use');
-            return res.redirect('/views/registration');
+            req.flash("error","email adress has been use");
+            return res.redirect("/views/registration");
         }
         next(err);
     });
@@ -77,7 +77,7 @@ export const profile = (req:Request, res:Response , next)=>{
     let id = req.session.user;
     console.log(req.flash());
     User.findById(id)
-    .then(user=>res.render('./views/profile',{user}))
+    .then(user=>res.render("./views/profile",{user}))
     .catch(err=>next(err));
     
 };
@@ -88,7 +88,7 @@ export const logout = (req, res, next)=>{
         if(err) 
            return next(err);
        else
-            res.redirect('/');  
+            res.redirect("/");  
     });
    
  };
