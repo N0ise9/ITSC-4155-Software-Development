@@ -50,12 +50,12 @@ export const login = (req:Request, res:Response , next)=>{
 
 
 
-exports.getUserLogin = (req, res, next) => {
+export const getUserLogin = (req:Request, res:Response , next) => {
         return res.render('./views/signin');
-}
+};
 
 //create a new user
-exports.create = (req, res, next)=>{
+export const create = (req:Request, res:Response , next)=>{
     let user = new User(req.body);
     user.save()
     .then(()=>res.redirect('/views/signin'))
@@ -73,7 +73,7 @@ exports.create = (req, res, next)=>{
 };
 
 //get user profile
-exports.profile = (req, res, next)=>{
+export const profile = (req:Request, res:Response , next)=>{
     let id = req.session.user;
     console.log(req.flash());
     User.findById(id)
@@ -83,7 +83,7 @@ exports.profile = (req, res, next)=>{
 };
 
 
-exports.logout = (req, res, next)=>{
+export const logout = (req, res, next)=>{
     req.session.destroy(err=>{
         if(err) 
            return next(err);
