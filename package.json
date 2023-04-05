@@ -10,6 +10,9 @@
     "test": "jest --testMatch='**/__tests__/*.unit.spec.ts' --testNamePattern=",
     "integration": "jest --runInBand --testMatch='**/__tests__/*.int.spec.ts' --testNamePattern="
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/N0ise9/ITSC-4155-Software-Development.git"

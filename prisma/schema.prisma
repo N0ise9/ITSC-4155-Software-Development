@@ -17,11 +17,17 @@ model FoodChoice {
 }
 
 model Restaurant {
-  restaurantID Int    @id @unique @default(autoincrement())
+  id String    @id @unique
   name         String @db.VarChar(255)
-  address      String @db.VarChar(255)
-  rating       Int?
-  cuisine      Int
+  image_url String
+  url String
+  review_count Int
+  categories Json
+  rating       Float
+  price      String?
+  location Json
+  phone String
+  display_phone String
 }
 
 model RestaurantFood {
