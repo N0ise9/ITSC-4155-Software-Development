@@ -8,10 +8,10 @@ async function main() {
       location: {
         equals: "4425 Sharon Rd",
         path: ["address1"],
-      }
+      },
     },
   });
-  console.log(allUsers);
+  console.info(allUsers);
 }
 
 main()

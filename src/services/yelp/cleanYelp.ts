@@ -2,7 +2,7 @@ import * as fs from "fs";
 
 fs.readFile("./src/services/yelp/outputYelp.json", "utf-8", (err, data) => {
   if (err) {
-    console.log(err);
+    console.info(err);
   }
   const dataToJson = JSON.parse(data);
   const newArray = dataToJson.map(
@@ -28,7 +28,7 @@ fs.readFile("./src/services/yelp/outputYelp.json", "utf-8", (err, data) => {
 
   fs.appendFile("./src/services/yelp/cleanedYelp.json", JSON.stringify(newArray, null, 2), (err: any) => {
     if (err) {
-      console.log(err);
+      console.info(err);
     }
   });
 });

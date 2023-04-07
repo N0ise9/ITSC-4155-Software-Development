@@ -6,7 +6,7 @@ import * as dotenv from "dotenv";
 // check discord for yelp API key to put in the env file
 dotenv.config();
 const blah = process.env.YELP_API_KEY;
-console.log(blah);
+console.info(blah);
 
 const searchRequest = {
   // free api is limited to 50 at once, expands to 1000 if approved
@@ -25,11 +25,11 @@ client
     const prettyJson = JSON.stringify(result, null, 2);
     fs.appendFile("./src/services/yelp/outputYelp.json", prettyJson, (err: any) => {
       if (err) {
-        console.log(err);
+        console.info(err);
       }
     });
-    console.log("1");
+    console.info("1");
   })
   .catch((e: any) => {
-    console.log(e);
+    console.info(e);
   });

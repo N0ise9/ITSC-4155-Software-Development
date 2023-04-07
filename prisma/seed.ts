@@ -9,7 +9,7 @@ const prettyJson = JSON.parse(restaurants);
 
 async function main() {
   for (let restaurant of prettyJson) {
-    console.log(restaurant);
+    console.info(restaurant);
     await prisma.restaurant.create({
       data: restaurant,
     });
@@ -18,7 +18,7 @@ async function main() {
 
 main()
   .catch((err) => {
-    console.log(err);
+    console.info(err);
     process.exit(1);
   })
   .finally(() => {
