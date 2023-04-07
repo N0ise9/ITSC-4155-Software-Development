@@ -17,16 +17,16 @@ model FoodChoice {
 }
 
 model Restaurant {
-  id String    @id @unique
-  name         String @db.VarChar(255)
-  image_url String
-  url String
-  review_count Int
-  categories Json
-  rating       Float
-  price      String?
-  location Json
-  phone String
+  id            String  @id @unique
+  name          String  @db.VarChar(255)
+  image_url     String
+  url           String
+  review_count  Int
+  categories    Json
+  rating        Float
+  price         String?
+  location      Json
+  phone         String
   display_phone String
 }
 

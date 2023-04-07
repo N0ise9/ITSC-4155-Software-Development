@@ -23,8 +23,7 @@ client
   .then(async (response: any) => {
     const result = response.jsonBody.businesses;
     const prettyJson = JSON.stringify(result, null, 2);
-    // TODO: data.json is for testing, change to outputYelp.json
-    fs.appendFile("./data.json", prettyJson, (err: any) => {
+    fs.appendFile("./src/services/yelp/outputYelp.json", prettyJson, (err: any) => {
       if (err) {
         console.log(err);
       }

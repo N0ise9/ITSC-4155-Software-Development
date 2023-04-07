@@ -27,7 +27,7 @@ fs.readFile("./src/services/yelp/outputYelp.json", "utf-8", (err, data) => {
   );
 
   // TODO: data.json is for testing, change to outputYelp.json
-  fs.appendFile("./data.json", JSON.stringify(newArray, null, 2), (err: any) => {
+  fs.appendFile("./src/services/yelp/cleanedYelp.json", JSON.stringify(newArray, null, 2), (err: any) => {
     if (err) {
       console.log(err);
     }

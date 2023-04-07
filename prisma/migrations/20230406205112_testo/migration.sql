@@ -12,13 +12,19 @@ CREATE TABLE "FoodChoice" (
 
 -- CreateTable
 CREATE TABLE "Restaurant" (
-    "restaurantID" SERIAL NOT NULL,
+    "id" TEXT NOT NULL,
     "name" VARCHAR(255) NOT NULL,
-    "address" VARCHAR(255) NOT NULL,
-    "rating" INTEGER,
-    "cuisine" INTEGER NOT NULL,
+    "image_url" TEXT NOT NULL,
+    "url" TEXT NOT NULL,
+    "review_count" INTEGER NOT NULL,
+    "categories" JSONB NOT NULL,
+    "rating" DOUBLE PRECISION NOT NULL,
+    "price" TEXT,
+    "location" JSONB NOT NULL,
+    "phone" TEXT NOT NULL,
+    "display_phone" TEXT NOT NULL,
 
-    CONSTRAINT "Restaurant_pkey" PRIMARY KEY ("restaurantID")
+    CONSTRAINT "Restaurant_pkey" PRIMARY KEY ("id")
 );
 
 -- CreateTable
@@ -76,7 +82,7 @@ CREATE TABLE "UserPrefrences" (
 CREATE UNIQUE INDEX "foodchoice_foodid_unique" ON "FoodChoice"("foodID");
 
 -- CreateIndex
-CREATE UNIQUE INDEX "Restaurant_restaurantID_key" ON "Restaurant"("restaurantID");
+CREATE UNIQUE INDEX "Restaurant_id_key" ON "Restaurant"("id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "restaurantfood_foodid_unique" ON "RestaurantFood"("foodID");

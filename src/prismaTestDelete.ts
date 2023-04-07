@@ -5,11 +5,11 @@ const prisma = new PrismaClient();
 async function main() {
   const allUsers = await prisma.restaurant.findMany({
     where: {
-      categories: {
-        path: ["alias"],
-        equals: "burgers",
+      location: {
+        equals: "4425 Sharon Rd",
+        path: ["address1"],
       }
-    }
+    },
   });
   console.log(allUsers);
 }
