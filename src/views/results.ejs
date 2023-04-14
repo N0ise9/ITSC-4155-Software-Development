@@ -7,15 +7,13 @@
 <link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
 <script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
 <link rel="stylesheet" href="css/results.css">
+<link rel="stylesheet" href="css/index.css">
 </head>
 <header>
-    <div class="header-buttons">
-        <button type="button">Group</button>
-        <button type="button">Sign in</button>
-    </div>
-    <h1>Let's Eat</h1>
-    <hr>
-</header>
+    <a href="/profile"><h2 class="userProfile">User Profile</h2></a>
+    <a href="/signin"><h2 class="signUp">Login</h2></a>
+    <a href="/"><h1>Let's Eat</h1></a>
+  </header>
 <body>
     <main>
         <h2>Results</h2>
@@ -56,5 +54,28 @@
         document.querySelector('#card3').addEventListener('click', (e) => marker3.togglePopup());
     </script>
     </main>
+    <footer>
+        <br>
+        <br>
+        <br>
+        <a href="/"><h5>©Let's Eat</h5></a>
+        <a href="/about"><h5>ABOUT US</h5></a>
+        <hr>
+
+        <h5>Top Cuisine Near You</h5>
+        <h6>Pizza Near Me</h6>
+        <h6>Sushi Near Me</h6>
+        <h6>Dessert Near Me</h6>
+        <h6>Cafe Near Me</h6>
+        <h6>Thai Food Near Me</h6>
+        <h6>Mexican Food Near Me</h6>
+        <h6>Indian Food Near Me</h6>
+        <h6>Italian Food Near Me</h6>
+
+
+        <% if (typeof libs !== 'undefined') { %>
+            <script src='js/<%= libs %>.js' type='module'></script>
+        <% } %>
+    </footer>
 </body>
 </html>
