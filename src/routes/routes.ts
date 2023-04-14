@@ -10,5 +10,5 @@ router.get("/registration", controller.registration);
 router.get("/signin", controller.signin);
 router.get("/survey", controller.survey);
 router.get("/thankyou", controller.thankyou);
-
+router.get("/about", controller.about);
 export = router;
