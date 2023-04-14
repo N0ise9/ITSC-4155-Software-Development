@@ -20,16 +20,17 @@ const client = yelp.client(blah);
 
 client
   .search(searchRequest)
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   .then(async (response: any) => {
     const result = response.jsonBody.businesses;
     const prettyJson = JSON.stringify(result, null, 2);
-    fs.appendFile("./src/services/yelp/outputYelp.json", prettyJson, (err: any) => {
+    fs.appendFile("./src/services/yelp/outputYelp.json", prettyJson, (err: unknown) => {
       if (err) {
         console.info(err);
       }
     });
     console.info("1");
   })
-  .catch((e: any) => {
+  .catch((e: unknown) => {
     console.info(e);
   });
