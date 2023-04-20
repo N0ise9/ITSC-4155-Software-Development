@@ -83,3 +83,18 @@ export interface Food {
   cuisine: Cuisine;
   flavors: ReadonlyArray<Flavor>;
 }
+
+export interface RestaurantData {
+  id: string;
+  name: string;
+  cuisine: Cuisine;
+  image_url: string;
+  url: string;
+  review_count: number;
+  categories: JSON;
+  rating: number;
+  price: string;
+  location: JSON;
+  phone: string;
+  display_phone: string;
+}
