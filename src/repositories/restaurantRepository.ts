@@ -1,5 +1,4 @@
 import { Prisma, PrismaClient } from "@prisma/client";
-import { waitForAllPromises } from "../utils/utils";
 import { RestaurantData } from "../utils/types";
 
 export class RestaurantRepository {

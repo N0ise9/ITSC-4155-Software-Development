@@ -1,3 +1,5 @@
+import { Prisma } from "@prisma/client";
+
 export const enum Flavor {
   Sweet = 0,
   Spicy = 1,
@@ -103,10 +105,10 @@ export interface RestaurantData {
   image_url: string;
   url: string;
   review_count: number;
-  categories: JSON;
+  categories: Prisma.JsonValue;
   rating: number;
-  price: string;
-  location: JSON;
+  price: string | null;
+  location: Prisma.JsonValue;
   phone: string;
   display_phone: string;
 }

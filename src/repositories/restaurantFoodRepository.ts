@@ -1,5 +1,4 @@
 import { Prisma, PrismaClient } from "@prisma/client";
-import { waitForAllPromises } from "../utils/utils";
 
 export class RestaurantFoodRepository {
   #RestaurantFood: Prisma.RestaurantFoodDelegate<Prisma.RejectOnNotFound | Prisma.RejectPerOperation | undefined>;
