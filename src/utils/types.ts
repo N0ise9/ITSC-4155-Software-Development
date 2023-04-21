@@ -1,3 +1,5 @@
+import * as Factory from "factory.ts";
+
 export const enum Flavor {
   Sweet = 0,
   Spicy = 1,
@@ -83,3 +85,7 @@ export interface Food {
   cuisine: Cuisine;
   flavors: ReadonlyArray<Flavor>;
 }
+
+export const UserMock = Factory.Sync.makeFactory<UserInSite>({
+
+})
