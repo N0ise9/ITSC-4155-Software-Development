@@ -1,10 +1,5 @@
 <%- include('./partials/header.ejs') %>
 
-<h1>Let's Eat</h1>
-<!--UserProfile page displays when user is logged in-->
-<h2 class="userProfile">User Profile</h2>
-<h2 class="signUp">SignUp/Login</h2>
-
 <br />
 <h2>Cuisine</h2>
 
@@ -31,7 +26,11 @@
   </li>
 </ul>
 
-<button>Idk</button>
-<button>Ok</button>
+<form action="/flavors" method="get">
+    <button>I'm not sure</button>
+  </form>
+  <form action="/flavors" method="get">
+    <button>Ok</button>
+  </form>
 
 <%- include('./partials/footer.ejs') %>

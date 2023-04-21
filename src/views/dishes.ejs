@@ -8,7 +8,14 @@
   <img src="none" alt="food" />
 </div>
 <div class="main-nav-buttons">
-  <button type="button">Go back</button>
-  <button type="button">Ok</button>
+  <form action="/flavors" method="get">
+    <button>Go back</button>
+  </form>
+  <form action="/results" method="get">
+    <button>I'm not sure</button>
+  </form>
+  <form action="/results" method="get">
+    <button>Ok</button>
+  </form>
 </div>
 <%- include('./partials/footer.ejs') %>

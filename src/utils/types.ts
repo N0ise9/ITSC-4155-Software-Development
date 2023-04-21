@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import * as Factory from "factory.ts";
+=======
+import { Prisma } from "@prisma/client";
+>>>>>>> ranking-algorithm
 
 export const enum Flavor {
   Sweet = 0,
@@ -61,31 +65,60 @@ export const enum Cuisine {
 
 export interface UserInSite {
   id: string;
-  cuisineChoices: Array<Cuisine> | null;
-  flavorChoices: Array<Flavor> | null;
-  foodChoices: Array<Food> | null;
-  foodFondness: ReadonlyArray<FoodFondness>;
-  foodRankings: ReadonlyArray<FoodRankings>;
+  foodMMR: Array<FoodMMR>;
+  cuisineMMR: Array<CuisineMMR>;
+  flavorMMR: Array<FlavorMMR>;
+  userRanking: Array<UserFoodRanking>;
 }
 
-export interface FoodFondness {
-  id: string;
-  user: string;
-  fondness?: number;
+export interface UserFoodRanking {
+  foodID: string;
+  userID: string;
+  ranking?: number;
 }
 
-export interface FoodRankings {
-  id: string;
-  user: string;
-  rank: number;
+export interface FlavorMMR {
+  flavorID: string;
+  userID: string;
+  mmr: number;
+}
+
+export interface CuisineMMR {
+  cuisineID: string;
+  userID: string;
+  mmr: number;
+}
+
+export interface FoodMMR {
+  foodID: string;
+  userID: string;
+  mmr: number;
 }
 
 export interface Food {
   id: string;
+  restaurantID: string;
   cuisine: Cuisine;
   flavors: ReadonlyArray<Flavor>;
 }
 
+<<<<<<< HEAD
 export const UserMock = Factory.Sync.makeFactory<UserInSite>({
 
 })
+=======
+export interface RestaurantData {
+  id: string;
+  name: string;
+  cuisine: Cuisine;
+  image_url: string;
+  url: string;
+  review_count: number;
+  categories: Prisma.JsonValue;
+  rating: number;
+  price: string | null;
+  location: Prisma.JsonValue;
+  phone: string;
+  display_phone: string;
+}
+>>>>>>> ranking-algorithm
