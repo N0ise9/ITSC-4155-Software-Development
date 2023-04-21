@@ -1,8 +1,4 @@
-<<<<<<< HEAD
-import * as Factory from "factory.ts";
-=======
 import { Prisma } from "@prisma/client";
->>>>>>> ranking-algorithm
 
 export const enum Flavor {
   Sweet = 0,
@@ -102,11 +98,6 @@ export interface Food {
   flavors: ReadonlyArray<Flavor>;
 }
 
-<<<<<<< HEAD
-export const UserMock = Factory.Sync.makeFactory<UserInSite>({
-
-})
-=======
 export interface RestaurantData {
   id: string;
   name: string;
@@ -121,4 +112,3 @@ export interface RestaurantData {
   phone: string;
   display_phone: string;
 }
->>>>>>> ranking-algorithm
