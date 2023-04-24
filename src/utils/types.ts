@@ -112,3 +112,10 @@ export interface RestaurantData {
   phone: string;
   display_phone: string;
 }
+
+export interface UpdateUserInSiteInput {
+  foodMMR?: Array<FoodMMR>;
+  cuisineMMR?: Array<CuisineMMR>;
+  flavorMMR?: Array<FlavorMMR>;
+  userRanking?: Array<UserFoodRanking>;
+}
