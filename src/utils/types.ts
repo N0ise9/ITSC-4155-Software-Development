@@ -115,7 +115,7 @@ export interface RestaurantData {
 
 export interface UpdateUserInSiteInput {
   foodMMR?: Array<FoodMMR>;
-  cuisineMMR?: Array<CuisineMMR>;
+  cuisineMMR?: CuisineMMR;
   flavorMMR?: Array<FlavorMMR>;
   userRanking?: Array<UserFoodRanking>;
 }
