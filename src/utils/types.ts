@@ -1,4 +1,5 @@
 import { Prisma } from "@prisma/client";
+import * as Factory from "factory.ts";
 
 export const enum Flavor {
   Sweet = 0,
@@ -112,3 +113,11 @@ export interface RestaurantData {
   phone: string;
   display_phone: string;
 }
+
+export interface UserInSiteMock = Factory.Sync.makeFactory<UserInSite>({
+  id: string;
+  foodMMR: Array<FoodMMR>;
+  cuisineMMR: Array<CuisineMMR>;
+  flavorMMR: Array<FlavorMMR>;
+  userRanking: Array<UserFoodRanking>;
+});
