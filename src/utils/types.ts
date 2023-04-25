@@ -1,5 +1,6 @@
 import { Prisma } from "@prisma/client";
 import * as Factory from "factory.ts";
+import { faker } from '@faker-js/faker';
 
 export const enum Flavor {
   Sweet = 0,
@@ -115,9 +116,15 @@ export interface RestaurantData {
 }
 
 export interface UserInSiteMock = Factory.Sync.makeFactory<UserInSite>({
-  id: string;
-  foodMMR: Array<FoodMMR>;
+  id: Factory.each(() => faker.lorem.words(3)),
+  foodMMR: faker.datatype.array()
   cuisineMMR: Array<CuisineMMR>;
   flavorMMR: Array<FlavorMMR>;
   userRanking: Array<UserFoodRanking>;
+});
+
+export interface FoodMMRMock = Factory.Sync.makeFactory<FoodMMR> ({
+  foodID: Factory.each(() => faker.lorem.words(3)), 
+  userID: Factory.each(() => faker.lorem.words(3)),
+  mmr: faker.datatype.number()
 });
