@@ -7,7 +7,7 @@ import { CuisineMMR } from "../utils/types";
 import { FlavorMMR } from "../utils/types";
 import { Food } from "../utils/types";
 import { RestaurantData } from "../utils/types";
-import { read } from "fs";
+import { read, write } from "fs";
 
 const MockFoodMMR = Factory.Sync.makeFactory<FoodMMR>({
     foodID: Factory.each(() => faker.lorem.words(3)), 
@@ -26,6 +26,25 @@ const MockFoodMMR = Factory.Sync.makeFactory<FoodMMR>({
     userID: Factory.each(() => faker.lorem.words(3)),
     mmr: faker.datatype.number()
   });
+
+  var foodMMR:any = {
+    foodID: "hamburger"
+  };
+
+  function createFoodId(id:any) {
+    console.log(id);
+  }
+
+  if (instanceOfFoodMMR(foodMMR)) {
+    createFoodId(foodMMR.foodID)
+  }
+  else {
+    createFoodId("No ID is registered with that foodID")
+  }
+
+  function instanceOfFoodMMR(data: any): data is FoodMMR {
+    return 'foodID' in data;
+  }
 
   /*const MockUserInSite = Factory.Sync.makeFactory<UserInSite>({
     id: Factory.each(() => faker.lorem.words(3)),
