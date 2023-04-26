@@ -22,5 +22,17 @@ export function calculateCuisineMatches(user: UserInSite): number[] {
       mmrArray[i] = calcProbabilityDecimal(first.mmr, orderedList[i].mmr);
     }
   }
-  return mmrArray;
+}
+
+export function calculateMMR(calculatedProbabilityDecimal: number): number {
+  let mmr = (1 - calculatedProbabilityDecimal) * 20;
+  mmr = Math.min(15, mmr);
+  mmr = Math.max(5, mmr);
+
+  return Math.round(mmr);
+}
+
+export function calculateProbability(calculatedProbabilityDecimal: number): number {
+  const probability = calculatedProbabilityDecimal * 100;
+  return Math.round(probability);
 }
