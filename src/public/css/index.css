@@ -307,7 +307,7 @@ body {
   }
 }
 
-#flavor-form, #dish-form {
+#flavor-form, #dish-form, #cuisine-form {
   display: flex;
   flex-direction: column;
   gap: 1rem;

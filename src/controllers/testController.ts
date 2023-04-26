@@ -16,6 +16,11 @@ export const sendDishes = (req: Request, res: Response) => {
   res.redirect("results");
 };
 
+export const sendCuisines = (req: Request, res: Response) => {
+  console.log(req.body);
+  res.redirect("flavors");
+}
+
 export const index = (req: Request, res: Response) => {
   res.render("index", { styles: "index", title: "Let's Eat" });
 };
