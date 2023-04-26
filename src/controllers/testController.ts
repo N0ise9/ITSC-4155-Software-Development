@@ -17,7 +17,6 @@ export const sendDishes = (req: Request, res: Response) => {
 };
 
 export const sendCuisines = (req: Request, res: Response) => {
-  console.log(req.body);
   res.redirect("flavors");
 }
 

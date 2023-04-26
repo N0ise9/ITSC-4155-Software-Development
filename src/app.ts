@@ -1,12 +1,20 @@
 import express, { Application } from "express";
 import path from "node:path";
 import routes from "./routes/routes";
+import session from "express-session";
 
 const app: Application = express();
 /* eslint-disable no-console */
 export function test() {
   return "test";
 }
+
+app.use(session({
+  secret: 'ao4sidjos5iadj7aosidwoi',
+  resave: false,
+  saveUninitialized: false,
+  cookie: {maxAge: 60*60*1000}
+}));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
