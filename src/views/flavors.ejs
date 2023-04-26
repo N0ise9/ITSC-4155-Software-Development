@@ -1,21 +1,29 @@
 <%- include('./partials/header.ejs') %>
 
 <h2>Choose flavors that you like</h2>
-<div class="flavor-buttons">
-  <button type="button">Salty</button>
-  <button type="button">Sweet</button>
-  <button type="button">Sour</button>
-  <button type="button">Spicy</button>
-</div>
+<form id="flavor-form">
+  <fieldset form="flavor-form" class="flavors">
+    <div>
+      <input type="checkbox" id="salty" name="salty">
+      <label for="salty">Salty</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sweet" name="sweet">
+      <label for="sweet">Sweet</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sour" name="sour">
+      <label for="sour">Sour</label>
+    </div>
+    <div>
+      <input type="checkbox" id="spicy" name="spicy">
+      <label for="spicy">Spicy</label>
+    </div>
+  </fieldset>
+</form>
 <div class="main-nav-buttons">
-  <form action="/" method="get">
-    <button>Go back</button>
-  </form>
-  <form action="/dishes" method="get">
-    <button>I'm not sure</button>
-  </form>
-  <form action="/dishes" method="get">
-    <button>Ok</button>
-  </form>
+    <button type="submit" form="flavor-form" formmethod="GET" formaction="/">Go back</button>
+    <button type="submit" form="flavor-form" formmethod="GET" formaction="#">I'm not sure</button>
+    <button type="submit" form="flavor-form" formmethod="POST" formaction="/flavors">Ok</button>
 </div>
 <%- include('./partials/footer.ejs') %>

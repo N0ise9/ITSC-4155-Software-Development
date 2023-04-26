@@ -306,3 +306,14 @@ body {
     visibility: visible;
   }
 }
+
+#flavor-form, #dish-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dish-form-row {
+  display: flex;
+  justify-content: center;
+}

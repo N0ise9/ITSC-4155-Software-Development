@@ -8,6 +8,14 @@ export const flavors = (req: Request, res: Response) => {
   res.render("flavors", { styles: "guided-index", title: "Flavors" });
 };
 
+export const sendFlavors = (req: Request, res: Response) => {
+  res.redirect("dishes");
+};
+
+export const sendDishes = (req: Request, res: Response) => {
+  res.redirect("results");
+};
+
 export const index = (req: Request, res: Response) => {
   res.render("index", { styles: "index", title: "Let's Eat" });
 };
