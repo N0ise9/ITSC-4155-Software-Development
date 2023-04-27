@@ -9,7 +9,6 @@ const foods = fs.readFileSync("./src/services/foodsCollection/modifiedFoods.json
 const restaurantsPrettyJson = JSON.parse(restaurants);
 const foodsPrettyJson = JSON.parse(foods);
 
-
 async function main() {
   for (let restaurant of restaurantsPrettyJson) {
     console.info(restaurant);
