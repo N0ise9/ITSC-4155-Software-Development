@@ -317,3 +317,13 @@ body {
   display: flex;
   justify-content: center;
 }
+
+.dish-container {
+  width: 200px;
+  height: 200px;
+}
+
+.dish-container img {
+  width: 100%;
+  height: 100%;
+}
