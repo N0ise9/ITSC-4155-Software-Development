@@ -7,24 +7,8 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model Restaurant {
-  id            String  @id @unique
-  name          String  @db.VarChar(255)
-  cuisine       Int
-  image_url     String
-  url           String
-  review_count  Int
-  categories    Json
-  rating        Float
-  price         String?
-  location      Json
-  phone         String
-  display_phone String
-}
-
-model RestaurantFood {
-  foodID       String    @id @unique(map: "restaurantfood_foodid_unique") 
-  restaurantID String
+model Food {
+  foodID       String    @id @unique(map: "food_foodid_unique") 
   cuisine      Int
   flavor       Int[]
   name         String @db.VarChar(255)
