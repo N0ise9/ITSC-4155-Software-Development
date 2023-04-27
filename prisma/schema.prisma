@@ -28,6 +28,7 @@ model RestaurantFood {
   cuisine      Int
   flavor       Int[]
   name         String @db.VarChar(255)
+  thumbnail      String
 }
 
 model User {
