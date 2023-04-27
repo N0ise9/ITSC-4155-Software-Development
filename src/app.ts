@@ -9,12 +9,14 @@ export function test() {
   return "test";
 }
 
-app.use(session({
-  secret: 'ao4sidjos5iadj7aosidwoi',
-  resave: false,
-  saveUninitialized: false,
-  cookie: {maxAge: 60*60*1000}
-}));
+app.use(
+  session({
+    cookie: { maxAge: 60 * 60 * 1000 },
+    resave: false,
+    saveUninitialized: false,
+    secret: "ao4sidjos5iadj7aosidwoi",
+  })
+);
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
