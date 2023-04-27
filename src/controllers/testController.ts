@@ -1,7 +1,14 @@
 import { Request, Response } from "express";
+import { PrismaClient } from "@prisma/client";
 
-export const dishes = (req: Request, res: Response) => {
-  res.render("dishes", { styles: "index", title: "Dishes" });
+const prisma = new PrismaClient();
+
+export const dishes = async (req: Request, res: Response) => {
+  const posts = await prisma.food.findMany({
+    // cuisine is hardcode, needs to
+    where: { cuisine: 21 },
+  });
+  res.render("dishes", { posts, styles: "index", title: "Dishes" });
 };
 
 export const flavors = (req: Request, res: Response) => {

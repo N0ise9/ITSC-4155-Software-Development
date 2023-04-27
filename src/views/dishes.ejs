@@ -2,10 +2,10 @@
 
 <h2>Choose what you like</h2>
 <div class="dishes">
-  <img src="none" alt="food" />
-  <img src="none" alt="food" />
-  <img src="none" alt="food" />
-  <img src="none" alt="food" />
+  <% posts.forEach((element) => { %>
+    <img src="<%=element.thumbnail%>" alt="<%=element.food%>" style="width:200px;height:200px;object-fit: cover;
+    object-position: 50% 50%;">
+  <%})%>
 </div>
 <div class="main-nav-buttons">
   <form action="/flavors" method="get">
