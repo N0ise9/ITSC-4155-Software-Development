@@ -10,7 +10,6 @@ datasource db {
 model Restaurant {
   id            String  @id @unique
   name          String  @db.VarChar(255)
-  cuisine       Int
   image_url     String
   url           String
   review_count  Int
