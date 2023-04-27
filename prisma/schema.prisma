@@ -31,11 +31,11 @@ model Restaurant {
 }
 
 model RestaurantFood {
-  foodID       Int    @id @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
-  cuisine      Int
-  flavor       Int
-  food         String @db.VarChar(255)
-  thumbnail    String
+  foodID         Int    @id @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
+  cuisine        Int
+  flavor_profile Int
+  food           String @db.VarChar(255)
+  thumbnail      String
 }
 
 model UserAccount {
