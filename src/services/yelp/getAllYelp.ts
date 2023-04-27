@@ -6,7 +6,6 @@ import * as dotenv from "dotenv";
 // check discord for yelp API key to put in the env file
 dotenv.config();
 const blah = process.env.YELP_API_KEY;
-console.info(blah);
 
 const searchRequest = {
   // free api is limited to 50 at once, expands to 1000 if approved
