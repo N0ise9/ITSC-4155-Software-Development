@@ -15,7 +15,7 @@ model Food {
 }
 
 model User {
-  userID     String      @id @unique 
+  id     String      @id @unique 
   username   String   @unique(map: "useraccount_username_unique") @db.VarChar(255)
   password   String   @db.VarChar(255)
   email      String   @unique(map: "useraccount_email_unique") @db.VarChar(255)

@@ -92,7 +92,8 @@ export interface FoodMMR {
 export interface Food {
   id: string;
   cuisine: Cuisine;
-  flavors: ReadonlyArray<Flavor>;
+  flavor: ReadonlyArray<Flavor>;
+  name: string;
 }
 
 export interface UpdateUserInSiteInput {
