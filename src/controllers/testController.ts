@@ -1,11 +1,39 @@
-import { Request, Response } from "express";
+import express, { Response } from "express";
+import { PrismaClient } from "@prisma/client";
+import { searchYelp } from "../services/yelp/searchYelp";
 
-export const dishes = (req: Request, res: Response) => {
-  res.render("dishes", { styles: "guided-style", title: "Dishes" });
+interface Request extends express.Request {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  session: any;
+}
+
+const prisma = new PrismaClient();
+
+export const dishes = async (req: Request, res: Response) => {
+  const posts = await prisma.food.findMany({
+    // cuisine is hardcode, needs to
+    where: { cuisine: 21 },
+  });
+  res.render("dishes", { posts, styles: "index", title: "Dishes" });
 };
 
 export const flavors = (req: Request, res: Response) => {
-  res.render("flavors", { styles: "guided-style", title: "Flavors" });
+  res.render("flavors", { styles: "guided-index", title: "Flavors" });
+};
+
+export const sendFlavors = (req: Request, res: Response) => {
+  req.session.flavorChoices = req.body;
+  res.redirect("dishes");
+};
+
+export const sendDishes = (req: Request, res: Response) => {
+  req.session.dishChoices = req.body;
+  res.redirect("results");
+};
+
+export const sendCuisines = (req: Request, res: Response) => {
+  req.session.cuisineChoices = req.body;
+  res.redirect("flavors");
 };
 
 export const index = (req: Request, res: Response) => {
@@ -17,7 +45,7 @@ export const profile = (req: Request, res: Response) => {
 };
 
 export const registration = (req: Request, res: Response) => {
-  res.render("registration", { styles: "registration", title: "Registration" });
+  res.render("registration", { styles: "index", title: "Registration" });
 };
 
 export const signin = (req: Request, res: Response) => {
@@ -30,4 +58,16 @@ export const survey = (req: Request, res: Response) => {
 
 export const thankyou = (req: Request, res: Response) => {
   res.render("thankyou", { styles: "index", title: "Thank You!" });
+};
+
+export const results = (req: Request, res: Response) => {
+  // alfredo should be the result of the algorithm
+  const results = searchYelp("alfredo");
+  results.then(function (result) {
+    res.render("results", { libs: results, result, title: "Results" });
+  });
+};
+
+export const about = (req: Request, res: Response) => {
+  res.render("about", { styles: "index", title: "About" });
 };

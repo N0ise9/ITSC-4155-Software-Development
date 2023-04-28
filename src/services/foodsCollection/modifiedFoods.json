@@ -1,0 +1,602 @@
+[
+  {
+    "name": "Veggie Burger",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5062236e2c5e99845e8/images/6036a9ef2f9b0f13bae41f4d0ea949464e1ab8d3a396f88baf8f5d214946d0b3.jpeg"
+  },
+  {
+    "name": "Hash Browns",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50695bf92e2f66d1d34/images/667e209fe3c79fda238ea646ef5728f459f272ccf6bfdc5ba26f6a04c2eb86d9.jpeg"
+  },
+  {
+    "name": "Pork Chops",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5065f2203c1b3562b88/images/5f65680bf8c13c9793dba1ccfc7d2efebd35b5db5efd6e11ed5ab7d9c0924d2e.jpeg"
+  },
+  {
+    "name": "Fried Chicken",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5068e02e454e69ff2fb/images/231eee5423cdc1d31f92deca6df39cf437bcf1acf013d6d698f7e45d2f35d742.jpeg"
+  },
+  {
+    "name": "Ramen",
+    "flavor": 3,
+    "cuisine": 20,
+    "thumbnail": "https://serpapi.com/searches/6449d5063944b03e049f7bea/images/336e2175234a1d9777133a6127dc7094d4f883b877f35b5818c37d633736b9e6.jpeg"
+  },
+  {
+    "name": "Steak",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506a74fe0374ccd168f/images/be65f1e839c8430456d86420f6394ccab897e735cbdfc5d16c9b024b06cfcd83.jpeg"
+  },
+  {
+    "name": "Meatball Sub",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506e0ded4083748040c/images/27df4389c90881f1cfc6474b3ac976da3f811e5e5936a7c2d348303b98b74c02.jpeg"
+  },
+  {
+    "name": "Pancakes",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5060f9866bcd10a035b/images/730c99bdfb849b5eb43181b1576893cf14b12b67a9743a80fbce5683d45d62cc.jpeg"
+  },
+  {
+    "name": "Bánh Mì",
+    "flavor": 3,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d50637014c9c00a6fe05/images/949773711d39cf125396deefe5a4b9a0f285f42b7b8268d8d5b14fcc37272167.jpeg"
+  },
+  {
+    "name": "Pulled Pork Sandwich",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5069d15869a9eb81300/images/993ed58fcaeeb17d1e7ba9a5e303f4d40478738e7c00b0a9412c36cb80735c41.jpeg"
+  },
+  {
+    "name": "Lobster Bisque",
+    "flavor": 3,
+    "cuisine": 9,
+    "thumbnail": "https://serpapi.com/searches/6449d506629a01fc2a54397e/images/e7c2c553e08d99257a6062f201fe503bf4f59c045460dc96766326b08c11a1eb.jpeg"
+  },
+  {
+    "name": "Spanakopita",
+    "flavor": 3,
+    "cuisine": 36,
+    "thumbnail": "https://serpapi.com/searches/6449d5064b91eb45783d12a9/images/120426741ad27a5c4b1a952337ff26a2abbcc5bb6c30a5bf26325151b3ce4059.jpeg"
+  },
+  {
+    "name": "Potato Salad",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506351764f086b05d1b/images/0d20944322b3e02b12f82b67830e137b050160d7cd825e1e9801c13fb8fd5910.jpeg"
+  },
+  {
+    "name": "Sausage",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506a1b423aeec1c00ff/images/9b4be916753a822f21928479606f9dce79e8a9b49eade87b2b1c5915b15a0108.jpeg"
+  },
+  {
+    "name": "Meatloaf",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506d737d718b863b638/images/17d19cc0fa810f9b082d882d59f28c811a517750db8db3405d63f1e28e48464e.jpeg"
+  },
+  {
+    "name": "Club Sandwich",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50658762b1e8000cedb/images/208761e9b714f8f78761495a534b0b0cbefaa39d5b793d31569779797602d3a0.jpeg"
+  },
+  {
+    "name": "French Toast",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5061e803ff9c46cdf9f/images/315a9fb85531e7e690b10942b729081b07ed5e0833a8538acdaa6abecb4d4bd1.jpeg"
+  },
+  {
+    "name": "Prime Rib",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506b5961eaa2d3a5ab0/images/c0511c665c1ece0f3447e00b266806facee09bf57b663d658e1e3ac2cbb591bc.jpeg"
+  },
+  {
+    "name": "Roast Beef",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506eb31eb1367e177d2/images/9f1983d20a82aa2c6ae93586a88a683a3d770aead5adc9532ba3b8c6c6b01a94.jpeg"
+  },
+  {
+    "name": "Mozzarella Sticks",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50610d7448b8a531a8f/images/8500b90c34ea1e706f6fe45c1d24e28c80d7c87869297bbc613c7b1b028e7f30.jpeg"
+  },
+  {
+    "name": "Gyro",
+    "flavor": 2,
+    "cuisine": 36,
+    "thumbnail": "https://serpapi.com/searches/6449d50629d177ac876090c9/images/a1052a24ee362cc237028f5c1de676bf96c877046259c08a65595ab6b0172547.jpeg"
+  },
+  {
+    "name": "Greek Salad",
+    "flavor": 2,
+    "cuisine": 36,
+    "thumbnail": "https://serpapi.com/searches/6449d506cace96c72919ed41/images/a795f1d1e92bfe760b810fdd6b76a121ab66d75e1377151802069965bc4bd256.jpeg"
+  },
+  {
+    "name": "Steak Frites",
+    "flavor": 2,
+    "cuisine": 37,
+    "thumbnail": "https://serpapi.com/searches/6449d5065c56068bfa468694/images/3f4b735c3e6bffdb8a8ece4ed000e1eff796433e51d3986c00ed6c2366122177.jpeg"
+  },
+  {
+    "name": "Crab Legs",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506e13508e1819326ba/images/60f5d7e6c2732e1c9485794c09b6016420ddf131d97784c8f6902e850eb0b524.jpeg"
+  },
+  {
+    "name": "Crab Cakes",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5069c84acd79d7806e7/images/9798f6ea733bb3b0916356382aa940aadaf370864b70d86e1715415fddc15f53.jpeg"
+  },
+  {
+    "name": "Omelette",
+    "flavor": 3,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5063e86acaee477d3f6/images/ee3fc6412e27b43492720f561ddac6b1b2f51c1eb798aa05ed97adbe8e093b0b.jpeg"
+  },
+  {
+    "name": "Hamburger Steak",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5061d64ea1e6983f4df/images/77b9b093b010e8a39bcdd38b1a9035b11c43973e03dda45b08c35456bc309171.jpeg"
+  },
+  {
+    "name": "Taco Salad",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d506cca01449723d9199/images/55200c25b8f9986ea9493f10899e031bb22f842775fed8518fe93a59a106ecc0.jpeg"
+  },
+  {
+    "name": "Jerk Chicken",
+    "flavor": 1,
+    "cuisine": 16,
+    "thumbnail": "https://serpapi.com/searches/6449d5062ff421dc8ddc4bbf/images/020015e18840c5f95c846bd049829cd07e8e948d85155a99bf23a1776fa0a78f.jpeg"
+  },
+  {
+    "name": "Onion Rings",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506eb690fbe63be41f2/images/6e392925d3bb97f6ca237240098e6581c0aab9731424fd9fdd2170e7268b55f4.jpeg"
+  },
+  {
+    "name": "Eggs Benedict",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506f218017199051244/images/a83cd8f46a653f0f33932c4b6a4e494a7853946516d312698b72d055715d9098.jpeg"
+  },
+  {
+    "name": "Fried Pickles",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5068ccee0ecd6c44d47/images/6c8af432abce70bd1f3e7fd3d3718c64b3001527222524d20f6f114f53446b36.jpeg"
+  },
+  {
+    "name": "Tacos",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d5062c0844fc08b841fc/images/78227bbc59f637521974ce2f2ef9a35c96b15fe0bf4e7d3c20e5a6bed7a4a9a1.jpeg"
+  },
+  {
+    "name": "Beef Stroganoff",
+    "flavor": 3,
+    "cuisine": 30,
+    "thumbnail": "https://serpapi.com/searches/6449d50611c88187dd3e4628/images/178e1d1f338d5d1894e39ba86f6582679a1d6e03c74988619bbed52442a0fd9f.jpeg"
+  },
+  {
+    "name": "Fish and Salad",
+    "flavor": 3,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506ca968ff3977e1728/images/027a03c5282dc8a02bad1c8579edfb77c86e02f80607bfcbbcf603f6685b0656.jpeg"
+  },
+  {
+    "name": "Chicken Fried Steak",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50634ff955d2010e654/images/56c568fe0e0a20120375f90d49c7208a85c2ffb84910842b72f6afb3a6602d37.jpeg"
+  },
+  {
+    "name": "Falafel",
+    "flavor": 2,
+    "cuisine": 27,
+    "thumbnail": "https://serpapi.com/searches/6449d506c9de45d3412d2677/images/43bc2bd0e839fb33d2953437a08e78302ce8b5a155102bcd470c656fc6cfe7bc.jpeg"
+  },
+  {
+    "name": "Enchiladas",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d5067690dc7293593f20/images/65f0c4e766d2006b752a52763ed5a645f2b874acd5df58c1b80b3cabfcdf068d.jpeg"
+  },
+  {
+    "name": "Grilled Cheese Sandwich",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506c7ad41c1460690dd/images/753bb4ea431dde8a7f5bfc956cd46911dc7f51c383801ae59382f4e0fb367560.jpeg"
+  },
+  {
+    "name": "Nachos",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d5063c3fb21f5c72dab4/images/ec006242e08e5413182370ba578f7027f0b1ee4278cc5190230b709b803d8c74.jpeg"
+  },
+  {
+    "name": "Spaghetti and Meatballs",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d506979054e5feb29baa/images/23a7c87b65d5c23ee1cea902ba9991bf842ed6fa40c379551fdd3174496c0df1.jpeg"
+  },
+  {
+    "name": "Shepherd's Pie",
+    "flavor": 3,
+    "cuisine": 31,
+    "thumbnail": "https://serpapi.com/searches/6449d506a4bb38491d6d9701/images/a5f704a20bf9b514e10b36336bb0f81a81b1f2da739f16f71f3d69ff116ccfa3.jpeg"
+  },
+  {
+    "name": "Garlic Bread",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506437af279c15f4ca9/images/a66c2a43af216fba7536c949970d2a397b9bcb1ab85021947a5606438b8e31ec.jpeg"
+  },
+  {
+    "name": "Corned Beef and Cabbage",
+    "flavor": 3,
+    "cuisine": 31,
+    "thumbnail": "https://serpapi.com/searches/6449d5067d171a59f4509feb/images/a9acd9356a34617b331a0c15579ed85e561b28a22d4ea5ee8bf7bf90fcf90a67.jpeg"
+  },
+  {
+    "name": "Shrimp Scampi",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d506359e990be19ec1bd/images/d05850eab477cb10e85a9aa012d84fc6b5b50436f1b935e99ecf1948dc5671bc.jpeg"
+  },
+  {
+    "name": "Corn Dogs",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506fe41d01551388360/images/390955720a7dc689660c4ffe7e31d9e7282e01c8423e6880a2d48b84062be62e.jpeg"
+  },
+  {
+    "name": "Hummus",
+    "flavor": 2,
+    "cuisine": 27,
+    "thumbnail": "https://serpapi.com/searches/6449d506303eb1c7046866fe/images/1a21c54a13bf9bb78f088bef660325f8f5aee06837d99029578a9755fc4cc9cb.jpeg"
+  },
+  {
+    "name": "Fried Shrimp",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506a5ad6d969554b960/images/2c8c946247d9fa0675ca57898982e9338c8e92bb460ec6b38b5eecbd140b0b1d.jpeg"
+  },
+  {
+    "name": "Chips and Salsa",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d506d5a53188a6d2f218/images/b8f7c06fa2c379d0eebb534cbcb076cda083c71d22a45c023ab0d810547c6954.jpeg"
+  },
+  {
+    "name": "Liver and Onions",
+    "flavor": 3,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506d3aba253e8e3d314/images/7911d99dcb672f85eeb5d6dd110f491b3c6da6add1528f6c210d66c82b2d4c86.jpeg"
+  },
+  {
+    "name": "Fried Calamari",
+    "flavor": 2,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d5062bc7d84bd7943855/images/ea463677b336cc9c3c920af3f1c45bdd6fd843a7a368d6b00fa40fc9b3534fd4.jpeg"
+  },
+  {
+    "name": "Philly Cheesesteak",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506b5961eaa2d3a5aaf/images/dd0c16ef117b4a46d4d995d07da70fa348a06cb52de7e49134abc7887cd5be15.jpeg"
+  },
+  {
+    "name": "Baked Potato",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506e4a23d4e9c2451ec/images/b179d7033e3b93bff981708979c914c31b95e841bb3aee52678106652ed357a0.jpeg"
+  },
+  {
+    "name": "Cornbread",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506224db1e06719ba3a/images/540751ff6a5d8d14a63536bfe28cc425ab6e0b327ad05ba0678f03396e45e177.jpeg"
+  },
+  {
+    "name": "BBQ Brisket",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506607393afbe3c77f1/images/e9f6276970e1933ea9def3d12056a8bbd619cb2da528efc5be224eeea4f14e97.jpeg"
+  },
+  {
+    "name": "Pork Belly",
+    "flavor": 8,
+    "cuisine": 23,
+    "thumbnail": "https://serpapi.com/searches/6449d506edb034106742200b/images/fe1439931e9bb028242fdf9d7e229f404d709fe1b5b97c5fa0dc65882209cf3e.jpeg"
+  },
+  {
+    "name": "Schnitzel",
+    "flavor": 3,
+    "cuisine": 29,
+    "thumbnail": "https://serpapi.com/searches/6449d5061071f49d745446e7/images/0befed459260968279c813c20f36efd7ab707ed532a2386d312561d2dfa5f30d.jpeg"
+  },
+  {
+    "name": "Caesar Salad",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50666d81fe88f7b6554/images/7d1df8ce3dcb5a06dcad3099955ed605ce691ec3108513505a3fee77570cd9a5.jpeg"
+  },
+  {
+    "name": "Pizza",
+    "flavor": 3,
+    "cuisine": 37,
+    "thumbnail": "https://serpapi.com/searches/6449d5062f542e70422396a1/images/0648e3c61ef0eba5ea7afa170e8a9ba6fac18500b3d34399022afa6524d43825.jpeg"
+  },
+  {
+    "name": "Bacon",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506d5a53188117b8309/images/0b602a69d3a4a71247bec1f90e160f2cf98679325dfd96242809128b814c777b.jpeg"
+  },
+  {
+    "name": "Beef Brisket",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506c90e0a6b0e19168e/images/a8d68c6f24d19f62c9237c34a7c1a2047c340602625efe9261dd489f78dcb267.jpeg"
+  },
+  {
+    "name": "Quesadilla",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d50647ccf11287fdfbed/images/37287b7ea0209d715cb0ae757b9c60dcd95f36c221da7efd43063a9bda1fd8d8.jpeg"
+  },
+  {
+    "name": "Fettuccine Alfredo",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d5068b7ed22a4731b5db/images/f1c8479ea0a69d71e615fbc87fcdb4655df5e2a603c2fd0a42739eb05340b92b.jpeg"
+  },
+  {
+    "name": "Chopped Steak",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50614b245c2a7899ba8/images/3e73e6f5656c90ee5ba0942ee069dea3a2b58f7e6174b76b8078e0d412214ab6.jpeg"
+  },
+  {
+    "name": "Spinach and Artichoke Dip",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506969c0887041df05c/images/13d6cdeeafa4032ec6bb7df887f8623b5bf30c885d6e6a134f3f2158dede88b6.jpeg"
+  },
+  {
+    "name": "Pot Roast",
+    "flavor": 3,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506654a8c87f13eea0b/images/19d5b455f164bd8c10a7a7e46ff6c578ec5abc1cf66e0fe22e2815cd0a692fc2.jpeg"
+  },
+  {
+    "name": "Hot Dog",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506660dbda89a875b92/images/2cb922194a95baed87ed347a73e02df3b2e0ad359b9186df319bd821b275b200.jpeg"
+  },
+  {
+    "name": "Tandoori Chicken",
+    "flavor": 3,
+    "cuisine": 21,
+    "thumbnail": "https://serpapi.com/searches/6449d506e815af57810ed1a6/images/5112eebe6bc6b17877189d9fc689fb4c15176b003d30f195221e29fcfbd898db.jpeg"
+  },
+  {
+    "name": "Baked Ziti",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d50624e88ed71866626a/images/9afc67f380a90ebe9a3d2ceb3146e09cbe70c2009ff5bae302186fb6932c4a40.jpeg"
+  },
+  {
+    "name": "Kebab",
+    "flavor": 3,
+    "cuisine": 27,
+    "thumbnail": "https://serpapi.com/searches/6449d506477c0ed5f824980f/images/912a5ae682e38e1b71060b50f79d00261b2ac6eab2c2351ae82456e0bf347700.jpeg"
+  },
+  {
+    "name": "Burrito",
+    "flavor": 2,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d506f26ac609d7bae958/images/201536fc63412ca63087e4a9ae282c907c0596e9f2a756a3acd954b8fff5f891.jpeg"
+  },
+  {
+    "name": "Fried Catfish",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5069c449d5c9701097b/images/f9f81d4d4e0e2c813ca19fc45f26c437174315dbe1535a68fab8ac11925a17aa.jpeg"
+  },
+  {
+    "name": "Waffles",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506c504e9db7cc2c2cf/images/72ff0c2e7f67ecf2809e13d36a62493aab944f2717ae046d7433b6497864e2d2.jpeg"
+  },
+  {
+    "name": "Naan",
+    "flavor": 0,
+    "cuisine": 21,
+    "thumbnail": "https://serpapi.com/searches/6449d506d036a7194cca1cbb/images/8301f9364fd312fcd2082bdfbd91d18b27385e5b620685d595fb8c856203ee5b.jpeg"
+  },
+  {
+    "name": "Lasagna",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d5063d69194a5bb8e5fe/images/7068a249ad6dcc79776fa9efa8fc9b3cea5e098e057fdff3cb61529de26a765d.jpeg"
+  },
+  {
+    "name": "Lasagna",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d506f8f5f755e838d556/images/7068a249ad6dcc79776fa9efa8fc9b3cea5e098e057fdff3cb61529de26a765d.jpeg"
+  },
+  {
+    "name": "Phở Cuốn",
+    "flavor": 3,
+    "cuisine": 13,
+    "thumbnail": "https://serpapi.com/searches/6449d506ada54b22b025f8be/images/aa70983cdfa964887ff2e7e6f3af507d9dc3992cb92338304249af355efc655c.jpeg"
+  },
+  {
+    "name": "Reuben Sandwich",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506224db1e10f79aecf/images/e9b24ea70d1979338ebcb196deb53293665d2041f8d77a7b14189224daa259e8.jpeg"
+  },
+  {
+    "name": "Mac and Cheese",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50637014c9b67332894/images/0ea4c9fe277b8048d454f85847f0f6c314822b3c8bacf7480dedabab11151c1c.jpeg"
+  },
+  {
+    "name": "Biryani",
+    "flavor": 3,
+    "cuisine": 21,
+    "thumbnail": "https://serpapi.com/searches/6449d50687a0ee635610d740/images/8a608f1f1a1ce98a0fc616a9d4374decb6c296db0f26c654718ee598a8126e41.jpeg"
+  },
+  {
+    "name": "Spaghetti Bolognese",
+    "flavor": 3,
+    "cuisine": 35,
+    "thumbnail": "https://serpapi.com/searches/6449d5062ff421dc8ddc4bbe/images/bed3787f324c1b291ace7d4db9cc7d459ecf8fc8d4f91fa35698d8536611ba02.jpeg"
+  },
+  {
+    "name": "Caesar Salad",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50679627c388e9d8eab/images/7d1df8ce3dcb5a06dcad3099955ed605ce691ec3108513505a3fee77570cd9a5.jpeg"
+  },
+  {
+    "name": "Biscuits and Gravy",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506af5af1e623028a8a/images/bc2c43c23dff479aa552eafa5fc55f275db60bbaa33daaf5d65e213f1e6dc1c1.jpeg"
+  },
+  {
+    "name": "Barbecue Ribs",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506edb034106742200a/images/498359aa5f08eba027c2ed4889f5cbf61d495913885b508b9c443de5d8a85458.jpeg"
+  },
+  {
+    "name": "General Tso's Chicken",
+    "flavor": 2,
+    "cuisine": 19,
+    "thumbnail": "https://serpapi.com/searches/6449d50649ecdbc6cefb284d/images/756994b8301042a7fb95b719e07e4f3af7858aeebbd8c7a53b4a1473fbcddff8.jpeg"
+  },
+  {
+    "name": "Chili con Carne",
+    "flavor": 1,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5064b91eb45783d12a8/images/390e57a2b5a8b85f99679b594f01372f21f424d8f9dceb5f15f5109396a50483.jpeg"
+  },
+  {
+    "name": "Quiche",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5061d986e03d028c0cd/images/a205df52ba4de9c9edfbfd1f25b85b754ccdf5cf65c7eca550f21213ee8ada9c.jpeg"
+  },
+  {
+    "name": "Buffalo Wings",
+    "flavor": 1,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5060b5062c4d04845ba/images/48c3f9b2061df770163f56e036bd47fd86669920ccafd887dd651ecfe9706f73.jpeg"
+  },
+  {
+    "name": "Mashed Potatoes",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5061071f49d745446e6/images/c4ef2738cb270227f6579e50bc5463bd6722bd064c4649b9803f984308186562.jpeg"
+  },
+  {
+    "name": "Curry",
+    "flavor": 3,
+    "cuisine": 21,
+    "thumbnail": "https://serpapi.com/searches/6449d5061988e5736b6b186a/images/d9b78d10aa9373012cd66e4568f80325336cc7df38213c95d61e16869f5e7dd5.jpeg"
+  },
+  {
+    "name": "Clam Chowder",
+    "flavor": 3,
+    "cuisine": 9,
+    "thumbnail": "https://serpapi.com/searches/6449d5060574f5d8803599a4/images/a681bce9a356eb20a46a341a4f7674b974f4cd92935142b158f5ecf38a885c94.jpeg"
+  },
+  {
+    "name": "Beef Wellington",
+    "flavor": 3,
+    "cuisine": 37,
+    "thumbnail": "https://serpapi.com/searches/6449d506116a55ed5d190a15/images/5328ffb91206def88008d6ceff3344b0aaeada65f5e7f58ed859201d01389b6c.jpeg"
+  },
+  {
+    "name": "Fish and Chips",
+    "flavor": 2,
+    "cuisine": 31,
+    "thumbnail": "https://serpapi.com/searches/6449d506f55d77b530d19992/images/dda6143170da4633f60cc5d32b8416283a377c6fc1f54a228eab38a6f76c7d50.jpeg"
+  },
+  {
+    "name": "Beef Rib",
+    "flavor": 8,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d50696f5d720638893f3/images/3d24ecde8d72d2031929db4a89d344f4905e781c010c5a166bc6bffc8cf7c572.jpeg"
+  },
+  {
+    "name": "Baked Beans",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d5060ead417229d8555c/images/742657336d98c57cf33a481a5e46d8d0489236a9ef1688e60989fd8fcebbc72c.jpeg"
+  },
+  {
+    "name": "Potato Skins",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449d506dc02f13c80582afb/images/89de8e6e6f69614630dfdcdfbbcb14fb3c5ed8ff0ff8b8c456db68e906b14b85.jpeg"
+  },
+  {
+    "name": "Cheeseburger",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449c76e1988e5736b6b126d/images/658127f7ab08a87d078f434290ce4deba9e3ee7b9e5ec972a527091750cb4543.jpeg"
+  },
+  {
+    "name": "Pie",
+    "flavor": 0,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449c9de303eb1c7a81dd0a1/images/c6c4b39353231dddc4453c7bc55c3ea00f15f1e55a38f51562b3826442928920.jpeg"
+  },
+  {
+    "name": "French Fries",
+    "flavor": 2,
+    "cuisine": 5,
+    "thumbnail": "https://serpapi.com/searches/6449c76e681ebe36025d8150/images/2caaaf686bc233d882c82b9de8f76e40c7906d9216dc52754e5daa2ab628b49f.jpeg"
+  },
+  {
+    "name": "Sushi",
+    "flavor": 5,
+    "cuisine": 20,
+    "thumbnail": "https://serpapi.com/searches/6449c9dead7fa9c457b467be/images/1480bc11d90bacf47759f2c3ae7a407cd526747f94cccda7663edf4f792787c6.jpeg"
+  }
+]

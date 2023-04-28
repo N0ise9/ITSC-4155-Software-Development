@@ -10,5 +10,9 @@ router.get("/registration", controller.registration);
 router.get("/signin", controller.signin);
 router.get("/survey", controller.survey);
 router.get("/thankyou", controller.thankyou);
-
+router.get("/results", controller.results);
+router.post("/flavors", controller.sendFlavors);
+router.post("/dishes", controller.sendDishes);
+router.post("/", controller.sendCuisines);
+router.get("/about", controller.about);
 export = router;

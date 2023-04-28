@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Mapbox test</title>
+<meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+<link href="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.css" rel="stylesheet">
+<script src="https://api.mapbox.com/mapbox-gl-js/v2.13.0/mapbox-gl.js"></script>
+<link rel="stylesheet" href="css/results.css">
+<link rel="stylesheet" href="css/index.css">
+</head>
+<header>
+    <a href="/profile"><h2 class="userProfile">User Profile</h2></a>
+    <a href="/signin"><h2 class="signUp">Login</h2></a>
+    <a href="/"><h1>Let's Eat</h1></a>
+  </header>
+<body>
+    <main>
+        <h2>Results</h2>
+        <div class="results-container">
+            <div class="card-container">
+                <% for (let i = 0; i < result.length; i++) { %>
+                    <div class="card" id="card<%=i + 1%>">
+                        <h2><%= result[i].name %></h2>
+                        <p>Rating: <%=result[i].rating%></p>
+                    </div>
+                <%}%>
+            </div>
+            <div id="map"></div>
+        </div>
+    <script>
+        mapboxgl.accessToken = 'pk.eyJ1IjoiYWFhaG1lZDEiLCJhIjoiY2xmb2pybTB0MHdkNjNycnp0NnpxeXAwcCJ9.Sy0CCfXauSYXGt9lBPNUEw';
+        const map = new mapboxgl.Map({
+            container: 'map',
+            style: 'mapbox://styles/mapbox/streets-v12',
+            center: [-80.843, 35.2271],
+            zoom: 9
+        });
+        const marker1 = new mapboxgl.Marker().setLngLat([-80.828631, 35.150636]).addTo(map);
+        const marker2 = new mapboxgl.Marker().setLngLat([-80.85519228575843, 35.217367419856366]).addTo(map);
+        const marker3 = new mapboxgl.Marker().setLngLat([-80.78288993470262, 35.21297629892978]).addTo(map);
+        marker1.setPopup(new mapboxgl.Popup().setHTML("<h1>Little Mama's</h1><p>4521 Sharon Road, Charlotte, NC 28211</p>"));
+        marker2.setPopup(new mapboxgl.Popup().setHTML("<h1>North Italia- Charlotte</h1><p>1414 S Tryon St, Charlotte, NC 28203</p>"));
+        marker3.setPopup(new mapboxgl.Popup().setHTML("<h1>Portofino's Italian Restaurant & Pizzeria</h1><p>3124 Eastway Dr, Charlotte, NC 28205</p>"));
+
+        document.querySelector('#card1').addEventListener('click', (e) => marker1.togglePopup());
+        document.querySelector('#card2').addEventListener('click', (e) => marker2.togglePopup());
+        document.querySelector('#card3').addEventListener('click', (e) => marker3.togglePopup());
+    </script>
+    </main>
+    <footer>
+        <br>
+        <br>
+        <br>
+        <a href="/"><h5>©Let's Eat</h5></a>
+        <a href="/about"><h5>ABOUT US</h5></a>
+        <hr>
+
+        <h5>Top Cuisine Near You</h5>
+        <h6>Pizza Near Me</h6>
+        <h6>Sushi Near Me</h6>
+        <h6>Dessert Near Me</h6>
+        <h6>Cafe Near Me</h6>
+        <h6>Thai Food Near Me</h6>
+        <h6>Mexican Food Near Me</h6>
+        <h6>Indian Food Near Me</h6>
+        <h6>Italian Food Near Me</h6>
+
+
+        <% if (typeof libs !== 'undefined') { %>
+            <script src='js/<%= libs %>.js' type='module'></script>
+        <% } %>
+    </footer>
+</body>
+</html>

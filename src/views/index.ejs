@@ -3,34 +3,36 @@
 <!--UserProfile page displays when user is logged in-->
 <a href="/profile"><h2 class="userProfile">User Profile</h2></a>
 <a href="/signin"><h2 class="signUp">Login</h2></a>
-
 <br />
 <h2>Cuisine</h2>
 
-<ul style="list-style: none">
-  <li>
-    Thai
-    <input type="checkbox" />
-  </li>
-  <li>
-    Chinese
-    <input type="checkbox" />
-  </li>
-  <li>
-    Italian
-    <input type="checkbox" />
-  </li>
-  <li>
-    Japanese
-    <input type="checkbox" />
-  </li>
-  <li>
-    Indian
-    <input type="checkbox" />
-  </li>
-</ul>
-
-<button><a href="/flavors">Idk</a></button>
-<button><a href="/flavors">Ok</button>
+<form id="cuisine-form">
+  <fieldset form="cuisine-form" class="cuisine">
+    <div>
+      <input type="checkbox" id="american" name="American">
+      <label for="american">American</label>
+    </div>
+    <div>
+      <input type="checkbox" id="chinese" name="Chinese">
+      <label for="chinese">Chinese</label>
+    </div>
+    <div>
+      <input type="checkbox" id="italian" name="Italian">
+      <label for="italian">Italian</label>
+    </div>
+    <div>
+      <input type="checkbox" id="indian" name="Indian">
+      <label for="indian">Indian</label>
+    </div>
+    <div>
+      <input type="checkbox" id="japanese" name="Japanese">
+      <label for="japanese">Japanese</label>
+    </div>
+  </fieldset>
+</form>
+<div class="main-nav-buttons">
+  <button type="submit" form="cuisine-form" formmethod="GET" formaction="#">I'm not sure</button>
+  <button type="submit" form="cuisine-form" formmethod="POST" formaction="/">Ok</button>
+</div>
 
 <%- include('./partials/footer.ejs') %>
