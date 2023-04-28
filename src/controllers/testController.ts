@@ -1,4 +1,9 @@
-import { Request, Response } from "express";
+import express, { Response } from "express";
+
+interface Request extends express.Request {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  session: any;
+}
 
 export const dishes = (req: Request, res: Response) => {
   res.render("dishes", { styles: "index", title: "Dishes" });
@@ -6,6 +11,21 @@ export const dishes = (req: Request, res: Response) => {
 
 export const flavors = (req: Request, res: Response) => {
   res.render("flavors", { styles: "guided-index", title: "Flavors" });
+};
+
+export const sendFlavors = (req: Request, res: Response) => {
+  req.session.flavorChoices = req.body;
+  res.redirect("dishes");
+};
+
+export const sendDishes = (req: Request, res: Response) => {
+  req.session.dishChoices = req.body;
+  res.redirect("results");
+};
+
+export const sendCuisines = (req: Request, res: Response) => {
+  req.session.cuisineChoices = req.body;
+  res.redirect("flavors");
 };
 
 export const index = (req: Request, res: Response) => {
