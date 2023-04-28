@@ -47,8 +47,10 @@
   "dependencies": {
     "@faker-js/faker": "^7.6.0",
     "@prisma/client": "^4.9.0",
+    "@types/express-session": "^1.17.7",
     "express": "^4.18.2",
     "factory.ts": "^1.4.0",
+    "express-session": "^1.17.3",
     "yelp-fusion": "^3.0.0"
   }
 }

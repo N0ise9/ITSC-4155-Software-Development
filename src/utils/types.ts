@@ -1,5 +1,3 @@
-import { Prisma } from "@prisma/client";
-
 export const enum Flavor {
   Sweet = 0,
   Spicy = 1,
@@ -93,24 +91,9 @@ export interface FoodMMR {
 
 export interface Food {
   id: string;
-  restaurantID: string;
   cuisine: Cuisine;
-  flavors: ReadonlyArray<Flavor>;
-}
-
-export interface RestaurantData {
-  id: string;
+  flavor: ReadonlyArray<Flavor>;
   name: string;
-  cuisine: Cuisine;
-  image_url: string;
-  url: string;
-  review_count: number;
-  categories: Prisma.JsonValue;
-  rating: number;
-  price: string | null;
-  location: Prisma.JsonValue;
-  phone: string;
-  display_phone: string;
 }
 
 export interface UpdateUserInSiteInput {

@@ -21,11 +21,3 @@ export function checkIfFoodMatch(user: UserInSite, food: Food, cuisine: Cuisine,
   }
   return true;
 }
-
-export function getRanking(foodMMR: FoodMMR): number {
-  return foodMMR.mmr;
-}
-
-export function getAllUserRankings(user: UserInSite): ReadonlyArray<UserFoodRanking> {
-  return user.userRanking;
-}
