@@ -4,14 +4,14 @@ import * as fs from "fs";
 
 const prisma = new PrismaClient();
 
-const restaurants = fs.readFileSync("./src/services/yelp/cleanedYelp.json", "utf-8");
-const prettyJson = JSON.parse(restaurants);
+const foods = fs.readFileSync("./src/services/foodsCollection/modifiedFoods.json", "utf-8");
+const foodsPrettyJson = JSON.parse(foods);
 
 async function main() {
-  for (let restaurant of prettyJson) {
-    console.info(restaurant);
-    await prisma.restaurant.create({
-      data: restaurant,
+  for (let food of foodsPrettyJson) {
+    console.info(food);
+    await prisma.food.create({
+      data: food,
     });
   }
 }

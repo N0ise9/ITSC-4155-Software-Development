@@ -1,12 +1,20 @@
 import express, { Response } from "express";
+import { PrismaClient } from "@prisma/client";
+import { searchYelp } from "../services/yelp/searchYelp";
 
 interface Request extends express.Request {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   session: any;
 }
 
-export const dishes = (req: Request, res: Response) => {
-  res.render("dishes", { styles: "index", title: "Dishes" });
+const prisma = new PrismaClient();
+
+export const dishes = async (req: Request, res: Response) => {
+  const posts = await prisma.food.findMany({
+    // cuisine is hardcode, needs to
+    where: { cuisine: 21 },
+  });
+  res.render("dishes", { posts, styles: "index", title: "Dishes" });
 };
 
 export const flavors = (req: Request, res: Response) => {
@@ -53,7 +61,11 @@ export const thankyou = (req: Request, res: Response) => {
 };
 
 export const results = (req: Request, res: Response) => {
-  res.render("results");
+  // alfredo should be the result of the algorithm
+  const results = searchYelp("alfredo");
+  results.then(function (result) {
+    res.render("results", { libs: results, result, title: "Results" });
+  });
 };
 
 export const about = (req: Request, res: Response) => {

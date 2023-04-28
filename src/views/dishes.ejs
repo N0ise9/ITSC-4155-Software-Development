@@ -2,9 +2,10 @@
 
 <h2>Choose what you like</h2>
 <form id="dish-form">
+  <% for (let i = 0; i < posts.length; i++) { %>
   <div class="dish-form-row">
     <div class="dish-container">
-      <img src="none" alt="food" />
+      <img src="<%=posts[i].thumbnail%>" alt="food" />
     </div>
     <fieldset form="dish-form" class="dish">
       <div>
@@ -29,34 +30,7 @@
       </div>   
     </fieldset>
   </div>
-
-  <div class="dish-form-row">
-    <div class="dish-container">
-      <img src="none" alt="food" />
-    </div>
-    <fieldset form="dish-form" class="dish">
-      <div>
-        <input type="radio" id="one" name="rank2" value="1">
-        <label for="one">1</label>
-      </div>
-      <div>
-        <input type="radio" id="two" name="rank2" value="2">
-        <label for="two">2</label>
-      </div> 
-      <div>
-        <input type="radio" id="three" name="rank2" value="3">
-        <label for="three">3</label>
-      </div> 
-      <div>
-        <input type="radio" id="four" name="rank2" value="4">
-        <label for="four">4</label>
-      </div> 
-      <div>
-        <input type="radio" id="five" name="rank2" value="5">
-        <label for="five">5</label>
-      </div>   
-    </fieldset>
-  </div>
+  <%}%>
 </form>
 <div class="main-nav-buttons">
   <button type="submit" form="dish-form" formmethod="GET" formaction="/flavors">Go back</button>
