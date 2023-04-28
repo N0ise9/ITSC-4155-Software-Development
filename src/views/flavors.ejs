@@ -1,21 +1,49 @@
 <%- include('./partials/header.ejs') %>
 
 <h2>Choose flavors that you like</h2>
-<div class="flavor-buttons">
-  <button type="button">Salty</button>
-  <button type="button">Sweet</button>
-  <button type="button">Sour</button>
-  <button type="button">Spicy</button>
-</div>
+<form id="flavor-form">
+  <fieldset form="flavor-form" class="flavors">
+    <div>
+      <input type="checkbox" id="salty" name="Salty">
+      <label for="salty">Salty</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sweet" name="Sweet">
+      <label for="sweet">Sweet</label>
+    </div>
+    <div>
+      <input type="checkbox" id="sour" name="Sour">
+      <label for="sour">Sour</label>
+    </div>
+    <div>
+      <input type="checkbox" id="spicy" name="Spicy">
+      <label for="spicy">Spicy</label>
+    </div>
+    <div>
+      <input type="checkbox" id="savory" name="Savory">
+      <label for="savory">Savory</label>
+    </div>
+    <div>
+      <input type="checkbox" id="bitter" name="Bitter">
+      <label for="bitter">Bitter</label>
+    </div>
+    <div>
+      <input type="checkbox" id="hot" name="Hot">
+      <label for="Hot">Hot</label>
+    </div>
+    <div>
+      <input type="checkbox" id="cold" name="Cold">
+      <label for="cold">Cold</label>
+    </div>
+    <div>
+      <input type="checkbox" id="meaty" name="Meaty">
+      <label for="meaty">Meaty</label>
+    </div>
+  </fieldset>
+</form>
 <div class="main-nav-buttons">
-  <form action="/" method="get">
-    <button>Go back</button>
-  </form>
-  <form action="/dishes" method="get">
-    <button>I'm not sure</button>
-  </form>
-  <form action="/dishes" method="get">
-    <button>Ok</button>
-  </form>
+    <button type="submit" form="flavor-form" formmethod="GET" formaction="/">Go back</button>
+    <button type="submit" form="flavor-form" formmethod="GET" formaction="#">I'm not sure</button>
+    <button type="submit" form="flavor-form" formmethod="POST" formaction="/flavors">Ok</button>
 </div>
 <%- include('./partials/footer.ejs') %>
