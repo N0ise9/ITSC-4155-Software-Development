@@ -7,67 +7,19 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model FoodChoice {
-  userID       Int    @id
-  restaurantID Int
-  foodID       Int    @unique(map: "foodchoice_foodid_unique")
-  name         String @db.VarChar(255)
-  cuisine      Int
-  flavor       Int[]
-}
-
-model Restaurant {
-  id            String  @id @unique
-  name          String  @db.VarChar(255)
-  image_url     String
-  url           String
-  review_count  Int
-  categories    Json
-  rating        Float
-  price         String?
-  location      Json
-  phone         String
-  display_phone String
-}
-
-model RestaurantFood {
-  foodID       Int    @id @unique(map: "restaurantfood_foodid_unique") @default(autoincrement())
-  restaurantID Int
+model Food {
+  foodID       String    @id @unique(map: "food_foodid_unique") @default(uuid()) 
   cuisine      Int
   flavor       Int[]
   name         String @db.VarChar(255)
-  calories     Int
-  carbs        Int
-  protein      Int
-  fat          Int
+  thumbnail      String
 }
 
-model UserAccount {
-  userID     Int      @id @unique @default(autoincrement())
+model User {
+  userID     String      @id @unique 
   username   String   @unique(map: "useraccount_username_unique") @db.VarChar(255)
   password   String   @db.VarChar(255)
   email      String   @unique(map: "useraccount_email_unique") @db.VarChar(255)
   name       String   @db.VarChar(255)
   accountAge DateTime @db.Date
-}
-
-model UserPrefrences {
-  userID      Int     @id @unique
-  range       Int     @default(50)
-  maxCost     Int?
-  cuisine     Int[]
-  flavor      Int[]
-  vegan       Boolean @default(false)
-  vegetarian  Boolean @default(false)
-  lowFat      Boolean @default(false)
-  lowCalorie  Boolean @default(false)
-  ketogenic   Boolean @default(false)
-  atkins      Boolean @default(false)
-  dash        Boolean @default(false)
-  glutenFree  Boolean @default(false)
-  fruitarian  Boolean @default(false)
-  cardiac     Boolean @default(false)
-  paleolithic Boolean @default(false)
-  pescetarian Boolean @default(false)
-  pritikin    Boolean @default(false)
 }

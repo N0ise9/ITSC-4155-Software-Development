@@ -1,0 +1,502 @@
+[
+  {
+    "food": "Cheeseburger",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "French Fries",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Pizza",
+    "flavor_profile": 3,
+    "cuisine": 37
+  },
+  {
+    "food": "Spaghetti Bolognese",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Mac and Cheese",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Grilled Cheese Sandwich",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Caesar Salad",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Club Sandwich",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Fish and Chips",
+    "flavor_profile": 2,
+    "cuisine": 31
+  },
+  {
+    "food": "Hot Dog",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Barbecue Ribs",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Steak",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Roast Beef",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Meatloaf",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Fried Chicken",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Biscuits and Gravy",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Beef Stroganoff",
+    "flavor_profile": 3,
+    "cuisine": 30
+  },
+  {
+    "food": "Pot Roast",
+    "flavor_profile": 3,
+    "cuisine": 5
+  },
+  {
+    "food": "Beef Wellington",
+    "flavor_profile": 3,
+    "cuisine": 37
+  },
+  {
+    "food": "Shepherd's Pie",
+    "flavor_profile": 3,
+    "cuisine": 31
+  },
+  {
+    "food": "Corned Beef and Cabbage",
+    "flavor_profile": 3,
+    "cuisine": 31
+  },
+  {
+    "food": "Chili con Carne",
+    "flavor_profile": 1,
+    "cuisine": 5
+  },
+  {
+    "food": "Taco Salad",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Enchiladas",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Burrito",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Quesadilla",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Nachos",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Chips and Salsa",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Clam Chowder",
+    "flavor_profile": 3,
+    "cuisine": 9
+  },
+  {
+    "food": "Lobster Bisque",
+    "flavor_profile": 3,
+    "cuisine": 9
+  },
+  {
+    "food": "Crab Cakes",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Shrimp Scampi",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Fried Shrimp",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Fried Calamari",
+    "flavor_profile": 2,
+    "cuisine": 35
+  },
+  {
+    "food": "Crab Legs",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Baked Potato",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Mashed Potatoes",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Potato Salad",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Hash Browns",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "French Toast",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Pancakes",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Waffles",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Eggs Benedict",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Omelette",
+    "flavor_profile": 3,
+    "cuisine": 5
+  },
+  {
+    "food": "Bacon",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Sausage",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Baked Beans",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Cornbread",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Hamburger Steak",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Liver and Onions",
+    "flavor_profile": 3,
+    "cuisine": 5
+  },
+  {
+    "food": "Beef Brisket",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Pulled Pork Sandwich",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Corn Dogs",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Fried Pickles",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Onion Rings",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Buffalo Wings",
+    "flavor_profile": 1,
+    "cuisine": 5
+  },
+  {
+    "food": "Caesar Salad",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Spinach and Artichoke Dip",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Baked Ziti",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Lasagna",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Garlic Bread",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Mozzarella Sticks",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Meatball Sub",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Philly Cheesesteak",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Reuben Sandwich",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Potato Skins",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Tacos",
+    "flavor_profile": 2,
+    "cuisine": 13
+  },
+  {
+    "food": "Veggie Burger",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Falafel",
+    "flavor_profile": 2,
+    "cuisine": 27
+  },
+  {
+    "food": "Hummus",
+    "flavor_profile": 2,
+    "cuisine": 27
+  },
+  {
+    "food": "Greek Salad",
+    "flavor_profile": 2,
+    "cuisine": 36
+  },
+  {
+    "food": "Spanakopita",
+    "flavor_profile": 3,
+    "cuisine": 36
+  },
+  {
+    "food": "Gyro",
+    "flavor_profile": 2,
+    "cuisine": 36
+  },
+  {
+    "food": "Quiche",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Steak Frites",
+    "flavor_profile": 2,
+    "cuisine": 37
+  },
+  {
+    "food": "Chicken Fried Steak",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Fried Catfish",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "BBQ Brisket",
+    "flavor_profile": 2,
+    "cuisine": 5
+  },
+  {
+    "food": "Pork Belly",
+    "flavor_profile": 8,
+    "cuisine": 23
+  },
+  {
+    "food": "Pork Chops",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Beef Rib",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Prime Rib",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Fish and Salad",
+    "flavor_profile": 3,
+    "cuisine": 5
+  },
+  {
+    "food": "Chopped Steak",
+    "flavor_profile": 8,
+    "cuisine": 5
+  },
+  {
+    "food": "Ramen",
+    "flavor_profile": 3,
+    "cuisine": 20
+  },
+  {
+    "food": "Curry",
+    "flavor_profile": 3,
+    "cuisine": 21
+  },
+  {
+    "food": "Tandoori Chicken",
+    "flavor_profile": 3,
+    "cuisine": 21
+  },
+  {
+    "food": "Naan",
+    "flavor_profile": 0,
+    "cuisine": 21
+  },
+  {
+    "food": "Biryani",
+    "flavor_profile": 3,
+    "cuisine": 21
+  },
+  {
+    "food": "General Tso's Chicken",
+    "flavor_profile": 2,
+    "cuisine": 19
+  },
+  {
+    "food": "Bánh Mì",
+    "flavor_profile": 3,
+    "cuisine": 13
+  },
+  {
+    "food": "Phở Cuốn",
+    "flavor_profile": 3,
+    "cuisine": 13
+  },
+  {
+    "food": "Lasagna",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Spaghetti and Meatballs",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Fettuccine Alfredo",
+    "flavor_profile": 3,
+    "cuisine": 35
+  },
+  {
+    "food": "Jerk Chicken",
+    "flavor_profile": 1,
+    "cuisine": 16
+  },
+  {
+    "food": "Kebab",
+    "flavor_profile": 3,
+    "cuisine": 27
+  },
+  {
+    "food": "Schnitzel",
+    "flavor_profile": 3,
+    "cuisine": 29
+  },
+  {
+    "food": "Sushi",
+    "flavor_profile": 5,
+    "cuisine": 20
+  },
+  {
+    "food": "Pie",
+    "flavor_profile": 0,
+    "cuisine": 5
+  }
+]

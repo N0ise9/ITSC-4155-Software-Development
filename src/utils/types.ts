@@ -1,3 +1,5 @@
+import { Prisma } from "@prisma/client";
+
 export const enum Flavor {
   Sweet = 0,
   Spicy = 1,
@@ -55,4 +57,65 @@ export const enum Cuisine {
   Micronesian = 41,
   Melanesian = 42,
   FastFood = 43,
+}
+
+export interface UserInSite {
+  id: string;
+  foodMMR: Array<FoodMMR>;
+  cuisineMMR: Array<CuisineMMR>;
+  flavorMMR: Array<FlavorMMR>;
+  userRanking: Array<UserFoodRanking>;
+}
+
+export interface UserFoodRanking {
+  foodID: string;
+  userID: string;
+  ranking?: number;
+}
+
+export interface FlavorMMR {
+  flavorID: string;
+  userID: string;
+  mmr: number;
+}
+
+export interface CuisineMMR {
+  cuisineID: string;
+  userID: string;
+  mmr: number;
+}
+
+export interface FoodMMR {
+  foodID: string;
+  userID: string;
+  mmr: number;
+}
+
+export interface Food {
+  id: string;
+  restaurantID: string;
+  cuisine: Cuisine;
+  flavors: ReadonlyArray<Flavor>;
+}
+
+export interface RestaurantData {
+  id: string;
+  name: string;
+  cuisine: Cuisine;
+  image_url: string;
+  url: string;
+  review_count: number;
+  categories: Prisma.JsonValue;
+  rating: number;
+  price: string | null;
+  location: Prisma.JsonValue;
+  phone: string;
+  display_phone: string;
+}
+
+export interface UpdateUserInSiteInput {
+  foodMMR?: Array<FoodMMR>;
+  cuisineMMR?: CuisineMMR;
+  flavorMMR?: Array<FlavorMMR>;
+  userRanking?: Array<UserFoodRanking>;
 }
