@@ -1,3 +1,5 @@
+import { Prisma } from "@prisma/client";
+
 export const enum Flavor {
   Sweet = 0,
   Spicy = 1,
