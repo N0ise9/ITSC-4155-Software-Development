@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { PrismaClient } from "@prisma/client";
+import { searchYelp } from "../services/yelp/searchYelp";
 
 const prisma = new PrismaClient();
 
@@ -40,7 +41,11 @@ export const thankyou = (req: Request, res: Response) => {
 };
 
 export const results = (req: Request, res: Response) => {
-  res.render("results");
+  // alfredo should be the result of the algorithm
+  const results = searchYelp("alfredo");
+  results.then(function (result) {
+    res.render("results", { libs: results, result, title: "Results" });
+  });
 };
 
 export const about = (req: Request, res: Response) => {
