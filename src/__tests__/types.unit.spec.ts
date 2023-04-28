@@ -5,8 +5,6 @@ import { UserFoodRanking } from "../utils/types";
 import { FoodMMR } from "../utils/types";
 import { CuisineMMR } from "../utils/types";
 import { FlavorMMR } from "../utils/types";
-import { Food } from "../utils/types";
-import { RestaurantData } from "../utils/types";
 
 const foodMock = Factory.Sync.makeFactory<FoodMMR>({
   foodID: Factory.each(() => faker.lorem.words(3)),
