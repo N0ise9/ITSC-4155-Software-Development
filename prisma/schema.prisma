@@ -10,7 +10,7 @@ datasource db {
 model Food {
   foodID       String    @id @unique(map: "food_foodid_unique") @default(uuid()) 
   cuisine      Int
-  flavor       Int[]
+  flavor       Int
   name         String @db.VarChar(255)
   thumbnail      String
 }
