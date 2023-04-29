@@ -1,7 +1,7 @@
 import express, { Response } from "express";
 import { PrismaClient } from "@prisma/client";
 import { searchYelp } from "../services/yelp/searchYelp";
-import {UserInSite, Flavor, Cuisine} from "../utils/types";
+import {UserInSite, Flavor, Cuisine, FlavorMMR, CuisineMMR} from "../utils/types";
 import {calculateCuisineMatches, calculateFlavorMatches} from "../services/algorithm";
 
 interface Request extends express.Request {
@@ -14,19 +14,19 @@ const prisma = new PrismaClient();
 export const dishes = async (req: Request, res: Response) => {
   const flavors: Array<number> = Object.values(req.session.flavorChoices);
   const cuisines: Array<number> = Object.values(req.session.cuisineChoices);
-  const queryFlavors: Array<object> = [];
-  const queryCuisines: Array<object> = [];
+  const queryFlavors: Array<number> = [];
+  const queryCuisines: Array<number> = [];
   flavors.forEach(flavor => {
-    queryFlavors.push({flavor: Number(flavor)});
+    queryFlavors.push(Number(flavor));
   });
   cuisines.forEach(cuisine => {
-    queryCuisines.push({cuisine: Number(cuisine)});
+    queryCuisines.push(Number(cuisine));
   });
-  console.log(queryFlavors);
-  console.log(queryCuisines);
   const posts = await prisma.food.findMany({
-    // cuisine is hardcode, needs to
-    
+    where: {
+      cuisine: {in: queryCuisines},
+      flavor: {in: queryFlavors},
+    }
   });
   res.render("dishes", { posts, styles: "index", title: "Dishes" });
 };
@@ -75,8 +75,37 @@ export const thankyou = (req: Request, res: Response) => {
 };
 
 export const results = (req: Request, res: Response) => {
-  // alfredo should be the result of the algorithm
-  console.log(req.session);
+  const cuisineChoices: Array<CuisineMMR> = [];
+  const flavorChoices: Array<FlavorMMR> = [];
+  const theCuisines: object = req.session.cuisineChoices;
+  const theFlavors: object = req.session.flavorChoices;
+  const theDishes: object = req.session.dishChoices;
+  for (const cuisine in theCuisines) {
+    cuisineChoices.push({
+      cuisineID: theCuisines[cuisine as keyof typeof theCuisines],
+      userID: "test",
+      mmr: 1100  
+    });
+  }
+  for (const flavor in theFlavors) {
+    flavorChoices.push({
+      flavorID: theFlavors[flavor as keyof typeof theFlavors],
+      userID: "test",
+      mmr: 1100  
+    });
+  }
+  for (const dish in theDishes) {
+    const id: string = dish.split("(")[0];
+    cuisineChoices.forEach(cuisine => {
+      if (cuisine.cuisineID === id) {
+        cuisine.mmr = cuisine.mmr + (Number(theDishes[dish as keyof typeof theDishes]) * 20);
+      }
+    })
+  }
+  console.log(cuisineChoices);
+  const theUser: UserInSite = {id: "test", cuisineMMR: cuisineChoices, flavorMMR: flavorChoices};
+  calculateCuisineMatches(theUser);
+  console.log(theUser.cuisineMMR[0]);
   searchYelp("alfredo")
   .then(function (result) {
     res.render("results", { libs: results, result, title: "Results" });

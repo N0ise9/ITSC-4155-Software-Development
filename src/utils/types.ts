@@ -61,10 +61,8 @@ export const enum Cuisine {
 
 export interface UserInSite {
   id: string;
-  foodMMR: Array<FoodMMR>;
   cuisineMMR: Array<CuisineMMR>;
   flavorMMR: Array<FlavorMMR>;
-  userRanking: Array<UserFoodRanking>;
 }
 
 export interface UserFoodRanking {
