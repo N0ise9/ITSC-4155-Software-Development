@@ -1,8 +1,8 @@
 import express, { Response } from "express";
 import { PrismaClient } from "@prisma/client";
 import { searchYelp } from "../services/yelp/searchYelp";
-import {UserInSite, Flavor, Cuisine, FlavorMMR, CuisineMMR} from "../utils/types";
-import {calculateCuisineMatches, calculateFlavorMatches} from "../services/algorithm";
+import { UserInSite, Cuisine, FlavorMMR, CuisineMMR } from "../utils/types";
+import { calculateCuisineMatches } from "../services/algorithm";
 
 interface Request extends express.Request {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -16,17 +16,17 @@ export const dishes = async (req: Request, res: Response) => {
   const cuisines: Array<number> = Object.values(req.session.cuisineChoices);
   const queryFlavors: Array<number> = [];
   const queryCuisines: Array<number> = [];
-  flavors.forEach(flavor => {
+  flavors.forEach((flavor) => {
     queryFlavors.push(Number(flavor));
   });
-  cuisines.forEach(cuisine => {
+  cuisines.forEach((cuisine) => {
     queryCuisines.push(Number(cuisine));
   });
   const posts = await prisma.food.findMany({
     where: {
-      cuisine: {in: queryCuisines},
-      flavor: {in: queryFlavors},
-    }
+      cuisine: { in: queryCuisines },
+      flavor: { in: queryFlavors },
+    },
   });
   res.render("dishes", { posts, styles: "index", title: "Dishes" });
 };
@@ -83,29 +83,28 @@ export const results = (req: Request, res: Response) => {
   for (const cuisine in theCuisines) {
     cuisineChoices.push({
       cuisineID: theCuisines[cuisine as keyof typeof theCuisines],
+      mmr: 1100,
       userID: "test",
-      mmr: 1100  
     });
   }
   for (const flavor in theFlavors) {
     flavorChoices.push({
       flavorID: theFlavors[flavor as keyof typeof theFlavors],
+      mmr: 1100,
       userID: "test",
-      mmr: 1100  
     });
   }
   for (const dish in theDishes) {
     const id: string = dish.split("(")[0];
-    cuisineChoices.forEach(cuisine => {
+    cuisineChoices.forEach((cuisine) => {
       if (cuisine.cuisineID === id) {
-        cuisine.mmr = cuisine.mmr + (Number(theDishes[dish as keyof typeof theDishes]) * 20);
+        cuisine.mmr = cuisine.mmr + Number(theDishes[dish as keyof typeof theDishes]) * 20;
       }
-    })
+    });
   }
-  const theUser: UserInSite = {id: "test", cuisineMMR: cuisineChoices, flavorMMR: flavorChoices};
+  const theUser: UserInSite = { cuisineMMR: cuisineChoices, flavorMMR: flavorChoices, id: "test" };
   calculateCuisineMatches(theUser);
-  searchYelp(String(Cuisine[Number(theUser.cuisineMMR[0].cuisineID)]))
-  .then(function (result) {
+  searchYelp(String(Cuisine[Number(theUser.cuisineMMR[0].cuisineID)])).then(function (result) {
     res.render("results", { libs: results, result, title: "Results" });
   });
 };
