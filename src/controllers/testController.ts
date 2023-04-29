@@ -102,11 +102,9 @@ export const results = (req: Request, res: Response) => {
       }
     })
   }
-  console.log(cuisineChoices);
   const theUser: UserInSite = {id: "test", cuisineMMR: cuisineChoices, flavorMMR: flavorChoices};
   calculateCuisineMatches(theUser);
-  console.log(theUser.cuisineMMR[0]);
-  searchYelp("alfredo")
+  searchYelp(String(Cuisine[Number(theUser.cuisineMMR[0].cuisineID)]))
   .then(function (result) {
     res.render("results", { libs: results, result, title: "Results" });
   });

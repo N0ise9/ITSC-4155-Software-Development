@@ -36,12 +36,12 @@
             center: [-80.843, 35.2271],
             zoom: 9
         });
-        const marker1 = new mapboxgl.Marker().setLngLat([-80.828631, 35.150636]).addTo(map);
-        const marker2 = new mapboxgl.Marker().setLngLat([-80.85519228575843, 35.217367419856366]).addTo(map);
-        const marker3 = new mapboxgl.Marker().setLngLat([-80.78288993470262, 35.21297629892978]).addTo(map);
-        marker1.setPopup(new mapboxgl.Popup().setHTML("<h1>Little Mama's</h1><p>4521 Sharon Road, Charlotte, NC 28211</p>"));
-        marker2.setPopup(new mapboxgl.Popup().setHTML("<h1>North Italia- Charlotte</h1><p>1414 S Tryon St, Charlotte, NC 28203</p>"));
-        marker3.setPopup(new mapboxgl.Popup().setHTML("<h1>Portofino's Italian Restaurant & Pizzeria</h1><p>3124 Eastway Dr, Charlotte, NC 28205</p>"));
+        const marker1 = new mapboxgl.Marker().setLngLat([Number("<%=result[0].coordinates.longitude%>"), Number("<%=result[0].coordinates.latitude%>")]).addTo(map);
+        const marker2 = new mapboxgl.Marker().setLngLat([Number("<%=result[1].coordinates.longitude%>"), Number("<%=result[1].coordinates.latitude%>")]).addTo(map);
+        const marker3 = new mapboxgl.Marker().setLngLat([Number("<%=result[2].coordinates.longitude%>"), Number("<%=result[2].coordinates.latitude%>")]).addTo(map);
+        marker1.setPopup(new mapboxgl.Popup().setHTML("<h1><%=result[0].name%></h1><p><%=result[0].location.address1%></p>"));
+        marker2.setPopup(new mapboxgl.Popup().setHTML("<h1><%=result[1].name%></h1><p><%=result[1].location.address1%></p>"));
+        marker3.setPopup(new mapboxgl.Popup().setHTML("<h1><%=result[2].name%></h1><p><%=result[2].location.address1%></p>"));
 
         document.querySelector('#card1').addEventListener('click', (e) => marker1.togglePopup());
         document.querySelector('#card2').addEventListener('click', (e) => marker2.togglePopup());

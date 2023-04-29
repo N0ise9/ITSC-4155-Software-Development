@@ -12,7 +12,7 @@ export const enum Flavor {
   Meaty = 8,
 }
 
-export const enum Cuisine {
+export enum Cuisine {
   CentralAfrican = 0,
   EastAfrican = 1,
   NorthAfrican = 2,
