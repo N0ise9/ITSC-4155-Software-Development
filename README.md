@@ -44,6 +44,7 @@ Prisma for TypeScript requires an environment variable in a `.env` file for data
 
 ```
 DATABASE_URL="postgresql://LetsEat:EatingIsFUN@localhost:5432/postgres"
+YELP_API_KEY="19988YEuYpNwEblEAgVYeGGmUmJjcGcmctkuhC904yG5XmTv2xSo0OMOcNXJ7LRJq9bUO0dPWuUDS8WI0v30G6qAJePLRiBy31QsJTHvVOR3oz1OStRSOaLIT4AkZHYx"
 ```
 
 - Save the file.
@@ -56,7 +57,7 @@ docker run --name letseat -p 5432:5432 -e POSTGRES_USER=LetsEat  -e POSTGRES_PAS
 
 This starts a new container using the [latest PostgreSQL image from Docker Hub](https://hub.docker.com/_/postgres) with the name "letseat."
 
-Next run `npx prisma db push` in a terminal with the working directory in the root of this project. This command compiles the Prisma schema, pushes it to the Postgres DB, and generates the types for development.
+Next run `npx prisma db push` in a terminal with the working directory in the root of this project. This command compiles the Prisma schema, pushes it to the Postgres DB, and generates the types for development. Then run `npx prisma migrate dev` to populate the database.
 
 - To stop the container, run the command: `docker container stop letseat`.
 - To start the container, run the command: `docker container start letseat`.
@@ -65,7 +66,7 @@ Prisma also offers a tool for viewing the data in the database called Prisma Stu
 
 ### Start LetsEat
 
-Now that our dependencies are installed and our database is running, we can run the code. Type `npm start` to start the project. To stop the project or to stop Prisma Studio hit `CTRL + C` in the running terminal.
+Now that our dependencies are installed and our database is running, we can run the code. Type `npm start` to start the project. When the server is running, go to a web browser and enter localhost:3000. To stop the project or to stop Prisma Studio hit `CTRL + C` in the running terminal.
 
 ## Tests
 
